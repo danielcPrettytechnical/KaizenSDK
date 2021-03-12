@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KaizenSDK'
-  s.version          = '0.0.1'
+  s.version          = '0.0.3'
   s.summary          = 'KaizenSDK is a software development kit (SDK) for iOS gaming apps'
 
 
@@ -14,8 +14,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Pretty Technical' => 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git' }
   s.source           = { :git => 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git',  :tag => "0.0.1" }
   s.ios.deployment_target = '10.0'
-  s.static_framework = true
-  s.ios.vendored_frameworks = 'KaizenSDK.framework'
+  s.ios.vendored_frameworks = 'KaizenSDK.xcframework'
   s.dependency 'Alamofire', '~> 5.2'
   s.dependency 'SwiftKeychainWrapper'
   s.swift_version = "5" 
