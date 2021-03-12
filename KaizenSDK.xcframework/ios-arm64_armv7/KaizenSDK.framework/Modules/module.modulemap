@@ -1,0 +1,11 @@
+framework module KaizenSDK {
+  umbrella header "KaizenSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module KaizenSDK.Swift {
+    header "KaizenSDK-Swift.h"
+    requires objc
+}

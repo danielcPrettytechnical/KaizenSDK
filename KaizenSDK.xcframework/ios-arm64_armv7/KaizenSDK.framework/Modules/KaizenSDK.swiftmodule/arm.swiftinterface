@@ -1,0 +1,51 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
+import Alamofire
+import Foundation
+@_exported import KaizenSDK
+import Swift
+import SwiftyBeaver
+import UIKit
+@_hasMissingDesignatedInitializers public class BaseUseCase {
+  @objc deinit
+}
+public protocol TemplateProviderContract {
+}
+public struct TemplatePresentationModel {
+}
+public enum UseCaseError : Swift.Error {
+  case mapping(Swift.Error)
+  case network
+  case underlying
+}
+public typealias BaseEntity = Swift.Codable & KaizenSDK.PresentationTransformable
+public protocol PresentationTransformable {
+  associatedtype PresentationModel
+  func toPresentation() throws -> Self.PresentationModel
+}
+extension Encodable {
+  public func jsonData() throws -> Foundation.Data
+  public func jsonString(encoding: Swift.String.Encoding = .utf8) throws -> Swift.String?
+  public func jsonDictonary() throws -> [Swift.String : Any]?
+}
+final public class Observable<Value> {
+  final public var value: Value {
+    get
+    set
+  }
+  public init(_ value: Value)
+  final public func observe(on observer: Swift.AnyObject, observerBlock: @escaping (Value) -> Swift.Void)
+  final public func remove(observer: Swift.AnyObject)
+  @objc deinit
+}
+public struct TemplateViewModelBuilder {
+}
+public enum TemplateViewModelState {
+  case loading
+  case show(KaizenSDK.TemplatePresentationModel)
+}
+public struct TemplateUseCaseBuilder {
+}
+public struct TemplateProviderBuilder {
+}
