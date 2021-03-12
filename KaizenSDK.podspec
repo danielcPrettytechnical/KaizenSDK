@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Pretty Technical' => 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git' }
   s.source           = { :git => 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git',  :tag => "0.0.1" }
   s.ios.deployment_target = '10.0'
+  s.static_framework = true
   s.ios.vendored_frameworks = 'KaizenSDK.framework'
   s.dependency 'Alamofire', '~> 5.2'
   s.dependency 'SwiftKeychainWrapper'
