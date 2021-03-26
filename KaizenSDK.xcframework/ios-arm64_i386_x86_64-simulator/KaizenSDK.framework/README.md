@@ -60,14 +60,16 @@ To connect the domain logic to the presentation layer we use **[UseCases](https:
 ## Presentation
 contains _UI (UIViewControllers or SwiftUI Views). Views_ are coordinated by _ViewModels (Presenters) which execute one or many Use Cases._ Presentation Layer **depends only** on the **Domain Layer**.
 
-We use KVO and we manage different stages with a view state **[observable](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/feature/KVS-iOS-README/KaizenSDK/Presentation/Scenes/TemplateScene/ViewModel/TemplateViewModel.swift#L13)**
+We use KVO and we manage different stages with a view state **[observable](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/master/KaizenSDK/Presentation/Scenes/TemplateScene/ViewModel/TemplateViewModel.swift#L13)**
 
-The **[view controller](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/feature/KVS-iOS-README/KaizenSDK/Presentation/Scenes/TemplateScene/View/TemplateViewController.swift)** reference the **[view model contract](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/feature/KVS-iOS-README/KaizenSDK/Presentation/Scenes/TemplateScene/ViewModel/TemplateViewModel.swift)** to manage all the presentation logic inside the view model. The **[view state](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/feature/KVS-iOS-README/KaizenSDK/Presentation/Scenes/TemplateScene/View/TemplateViewController.swift#L11)** will notify the view controller when logic has change.
+The **[view controller](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/master/KaizenSDK/Presentation/Scenes/TemplateScene/View/TemplateViewController.swift)** reference the **[view model contract](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/master/KaizenSDK/Presentation/Scenes/TemplateScene/ViewModel/TemplateViewModel.swift)** to manage all the presentation logic inside the view model. The **[view state](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/master/KaizenSDK/Presentation/Scenes/TemplateScene/View/TemplateViewController.swift#L11)** will notify the view controller when logic has change.
+
+The view component extend of a [**BaseComponent**](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/master/KaizenSDK/Core/BaseComponent.swift) that already have all the method to load the xib and to initialise the content view.
 
 **You can check the template class code in the Git repository, please kindly use the template. If not, it can affect the DOD guidelines and the merge request can be rejected.**
 
 ## Unit test
-Each layer should have his own unit test class. For example: If we want to unit test a provider. We create a unit test class. Please refer or use this **[template](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/feature/KVS-55-MOCK-TARGET/KaizenSDKTests/TemplateUseCaseTest.swift)** as an example.
+Each layer should have his own unit test class. For example: If we want to unit test a provider. We create a unit test class. Please refer or use this **[template](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/master/KaizenSDKTests/TemplateUseCaseTest.swift)** as an example.
 
 Is important to keep it simple and always create a **When**, **Given** and **Then** comment.
 Please name the test method as much understandable possible. Also always test the **success** and **failure** methods.

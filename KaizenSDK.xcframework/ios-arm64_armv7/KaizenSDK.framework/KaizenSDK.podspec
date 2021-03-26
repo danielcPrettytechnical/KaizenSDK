@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'KaizenSDK/**/*'
   s.dependency 'SwiftyBeaver'
+  s.dependency 'Alamofire'
   s.swift_version = "5" 
   s.exclude_files = [ './Pods', './Podfile', './Podfile.lock', 'KaizenSDK/**/*.plist' ]
 end

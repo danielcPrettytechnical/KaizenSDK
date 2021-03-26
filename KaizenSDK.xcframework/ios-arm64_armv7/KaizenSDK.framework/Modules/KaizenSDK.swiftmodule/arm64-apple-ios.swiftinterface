@@ -7,17 +7,23 @@ import Foundation
 import Swift
 import SwiftyBeaver
 import UIKit
+import WebKit
 @_hasMissingDesignatedInitializers public class BaseUseCase {
   @objc deinit
-}
-public protocol TemplateProviderContract {
 }
 public struct TemplatePresentationModel {
 }
 public enum UseCaseError : Swift.Error {
-  case mapping(Swift.Error)
+  case mapping
   case network
   case underlying
+  public static func == (a: KaizenSDK.UseCaseError, b: KaizenSDK.UseCaseError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct PitchComponentUseCaseBuilder {
 }
 public typealias BaseEntity = Swift.Codable & KaizenSDK.PresentationTransformable
 public protocol PresentationTransformable {
@@ -28,6 +34,14 @@ extension Encodable {
   public func jsonData() throws -> Foundation.Data
   public func jsonString(encoding: Swift.String.Encoding = .utf8) throws -> Swift.String?
   public func jsonDictonary() throws -> [Swift.String : Any]?
+}
+@objc @_inheritsConvenienceInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate {
+  open var xibName: Swift.String? {
+    get
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 final public class Observable<Value> {
   final public var value: Value {
@@ -45,7 +59,42 @@ public enum TemplateViewModelState {
   case loading
   case show(KaizenSDK.TemplatePresentationModel)
 }
+public protocol TemplateViewModelContract : AnyObject {
+  var viewState: KaizenSDK.Observable<KaizenSDK.TemplateViewModelState> { get set }
+}
+public struct StatsUseCaseBuilder {
+}
 public struct TemplateUseCaseBuilder {
+}
+@objc public class StatsViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc public class PitchViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 public struct TemplateProviderBuilder {
 }
+public protocol TemplateViewContract {
+  var viewModel: KaizenSDK.TemplateViewModelContract? { get set }
+}
+@objc public class TemplateViewComponent : KaizenSDK.BaseComponent, KaizenSDK.TemplateViewContract {
+  override public var xibName: Swift.String? {
+    get
+  }
+  weak public var viewModel: KaizenSDK.TemplateViewModelContract?
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+extension KaizenSDK.UseCaseError : Swift.Equatable {}
+extension KaizenSDK.UseCaseError : Swift.Hashable {}
