@@ -41,7 +41,28 @@ extension Encodable {
   }
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  open func calculateContentSize(to contentView: UIKit.UIView, pixelScale: Swift.Double = 3.0) -> (width: Swift.Double, height: Swift.Double)
   @objc deinit
+}
+@objc public class LineUpsViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func calculateContentSize(to contentView: UIKit.UIView, pixelScale: Swift.Double = 3.0) -> (width: Swift.Double, height: Swift.Double)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public struct LineUpsUseCaseBuilder {
+}
+@objc public class SummaryViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 final public class Observable<Value> {
   final public var value: Value {
@@ -61,6 +82,8 @@ public enum TemplateViewModelState {
 }
 public protocol TemplateViewModelContract : AnyObject {
   var viewState: KaizenSDK.Observable<KaizenSDK.TemplateViewModelState> { get set }
+}
+public struct SummaryUseCaseBuilder {
 }
 public struct StatsUseCaseBuilder {
 }
