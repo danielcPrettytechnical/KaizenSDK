@@ -8,6 +8,8 @@ import Swift
 import SwiftyBeaver
 import UIKit
 import WebKit
+public struct StandingsUseCaseBuilder {
+}
 @_hasMissingDesignatedInitializers public class BaseUseCase {
   @objc deinit
 }
@@ -22,6 +24,15 @@ public enum UseCaseError : Swift.Error {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
+}
+@objc public class MatchViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func calculateContentSize(to contentView: UIKit.UIView, pixelScale: Swift.Double = 3.0) -> (width: Swift.Double, height: Swift.Double)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 public struct PitchComponentUseCaseBuilder {
 }
@@ -53,6 +64,8 @@ extension Encodable {
   @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public struct MatchUseCaseBuilder {
 }
 public struct LineUpsUseCaseBuilder {
 }
@@ -106,6 +119,14 @@ public struct TemplateUseCaseBuilder {
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 public struct TemplateProviderBuilder {
+}
+@objc public class StandingsViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 public protocol TemplateViewContract {
   var viewModel: KaizenSDK.TemplateViewModelContract? { get set }

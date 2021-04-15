@@ -231,8 +231,24 @@ SWIFT_CLASS("_TtC9KaizenSDK20LineUpsViewComponent")
 
 
 
+SWIFT_CLASS("_TtC9KaizenSDK18MatchViewComponent")
+@interface MatchViewComponent : BaseComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
 SWIFT_CLASS("_TtC9KaizenSDK18PitchViewComponent")
 @interface PitchViewComponent : BaseComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+SWIFT_CLASS("_TtC9KaizenSDK22StandingsViewComponent")
+@interface StandingsViewComponent : BaseComponent
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -500,8 +516,24 @@ SWIFT_CLASS("_TtC9KaizenSDK20LineUpsViewComponent")
 
 
 
+SWIFT_CLASS("_TtC9KaizenSDK18MatchViewComponent")
+@interface MatchViewComponent : BaseComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
 SWIFT_CLASS("_TtC9KaizenSDK18PitchViewComponent")
 @interface PitchViewComponent : BaseComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+SWIFT_CLASS("_TtC9KaizenSDK22StandingsViewComponent")
+@interface StandingsViewComponent : BaseComponent
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -769,8 +801,24 @@ SWIFT_CLASS("_TtC9KaizenSDK20LineUpsViewComponent")
 
 
 
+SWIFT_CLASS("_TtC9KaizenSDK18MatchViewComponent")
+@interface MatchViewComponent : BaseComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
 SWIFT_CLASS("_TtC9KaizenSDK18PitchViewComponent")
 @interface PitchViewComponent : BaseComponent
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+SWIFT_CLASS("_TtC9KaizenSDK22StandingsViewComponent")
+@interface StandingsViewComponent : BaseComponent
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
