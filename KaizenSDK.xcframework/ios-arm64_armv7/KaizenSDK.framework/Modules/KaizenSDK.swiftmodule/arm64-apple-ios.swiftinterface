@@ -15,6 +15,8 @@ public struct StandingsUseCaseBuilder {
 }
 public struct TemplatePresentationModel {
 }
+public struct StatisticsUseCaseBuilder {
+}
 public enum UseCaseError : Swift.Error {
   case mapping
   case network
@@ -30,13 +32,15 @@ public enum UseCaseError : Swift.Error {
     get
   }
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  override public func calculateContentSize(to contentView: UIKit.UIView, pixelScale: Swift.Double = 3.0) -> (width: Swift.Double, height: Swift.Double)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 public struct PitchComponentUseCaseBuilder {
 }
+public struct MatchDetailUseCaseBuilder {
+}
 public typealias BaseEntity = Swift.Codable & KaizenSDK.PresentationTransformable
+public typealias BaseEntityEnum = KaizenSDK.PresentationTransformable
 public protocol PresentationTransformable {
   associatedtype PresentationModel
   func toPresentation() throws -> Self.PresentationModel
@@ -52,7 +56,8 @@ extension Encodable {
   }
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  open func calculateContentSize(to contentView: UIKit.UIView, pixelScale: Swift.Double = 3.0) -> (width: Swift.Double, height: Swift.Double)
+  open func calculateContentSize(to contentView: UIKit.UIView) -> (width: Swift.Double, height: Swift.Double)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   @objc deinit
 }
 @objc public class LineUpsViewComponent : KaizenSDK.BaseComponent {
@@ -60,8 +65,6 @@ extension Encodable {
     get
   }
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  override public func calculateContentSize(to contentView: UIKit.UIView, pixelScale: Swift.Double = 3.0) -> (width: Swift.Double, height: Swift.Double)
-  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
@@ -96,6 +99,15 @@ public enum TemplateViewModelState {
 public protocol TemplateViewModelContract : AnyObject {
   var viewState: KaizenSDK.Observable<KaizenSDK.TemplateViewModelState> { get set }
 }
+public struct KZStyleMatchDetailModel {
+}
+public protocol MatchDetailRoutingLogic {
+  func start()
+  var matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel { get set }
+}
+public struct MatchDetailViewBuilder {
+  public static func inject(with navigationController: UIKit.UINavigationController) -> KaizenSDK.MatchDetailRoutingLogic
+}
 public struct SummaryUseCaseBuilder {
 }
 public struct StatsUseCaseBuilder {
@@ -118,7 +130,47 @@ public struct TemplateUseCaseBuilder {
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
+public protocol StatisticsRoutingLogic {
+  func start() -> UIKit.UIViewController
+}
+public struct StatisticsViewBuilder {
+  public static func inject() -> KaizenSDK.StatisticsRoutingLogic
+}
 public struct TemplateProviderBuilder {
+}
+@objc @_inheritsConvenienceInitializers open class TabPageViewController : UIKit.UIPageViewController {
+  open var isInfinity: Swift.Bool
+  open var tabItems: [(viewController: UIKit.UIViewController, title: Swift.String)] {
+    get
+    set
+  }
+  public static func create() -> KaizenSDK.TabPageViewController?
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension TabPageViewController {
+  public func displayControllerWithIndex(_ index: Swift.Int, direction: UIKit.UIPageViewController.NavigationDirection, animated: Swift.Bool)
+}
+extension TabPageViewController {
+  public func updateNavigationBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool)
+  public func showNavigationBar()
+}
+extension TabPageViewController : UIKit.UIPageViewControllerDataSource {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+}
+extension TabPageViewController : UIKit.UIPageViewControllerDelegate {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+}
+extension TabPageViewController : UIKit.UIScrollViewDelegate {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
 }
 @objc public class StandingsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {

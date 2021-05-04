@@ -12,3 +12,6 @@
 ### Features
 - Standings component
 - Match Incidents component
+
+## Version 0.0.5
+- Implement dynamic tabs
