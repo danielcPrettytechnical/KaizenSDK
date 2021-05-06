@@ -1,0 +1,195 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
+import Alamofire
+import Foundation
+@_exported import KaizenSDK
+import Swift
+import UIKit
+import WebKit
+public struct StandingsUseCaseBuilder {
+}
+@_hasMissingDesignatedInitializers public class BaseUseCase {
+  @objc deinit
+}
+public struct TemplatePresentationModel {
+}
+public struct StatisticsUseCaseBuilder {
+}
+public enum UseCaseError : Swift.Error {
+  case mapping
+  case network
+  case underlying
+  public static func == (a: KaizenSDK.UseCaseError, b: KaizenSDK.UseCaseError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc public class MatchViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public struct PitchComponentUseCaseBuilder {
+}
+public struct MatchDetailUseCaseBuilder {
+}
+public typealias BaseEntity = Swift.Codable & KaizenSDK.PresentationTransformable
+public typealias BaseEntityEnum = KaizenSDK.PresentationTransformable
+public protocol PresentationTransformable {
+  associatedtype PresentationModel
+  func toPresentation() throws -> Self.PresentationModel
+}
+extension Encodable {
+  public func jsonData() throws -> Foundation.Data
+  public func jsonString(encoding: Swift.String.Encoding = .utf8) throws -> Swift.String?
+  public func jsonDictonary() throws -> [Swift.String : Any]?
+}
+@objc @_inheritsConvenienceInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate {
+  open var xibName: Swift.String? {
+    get
+  }
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  open func calculateContentSize(to contentView: UIKit.UIView) -> (width: Swift.Double, height: Swift.Double)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc deinit
+}
+@objc public class LineUpsViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public struct MatchUseCaseBuilder {
+}
+public struct LineUpsUseCaseBuilder {
+}
+@objc public class SummaryViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+final public class Observable<Value> {
+  final public var value: Value {
+    get
+    set
+  }
+  public init(_ value: Value)
+  final public func observe(on observer: Swift.AnyObject, observerBlock: @escaping (Value) -> Swift.Void)
+  final public func remove(observer: Swift.AnyObject)
+  @objc deinit
+}
+public struct TemplateViewModelBuilder {
+}
+public enum TemplateViewModelState {
+  case loading
+  case show(KaizenSDK.TemplatePresentationModel)
+}
+public protocol TemplateViewModelContract : AnyObject {
+  var viewState: KaizenSDK.Observable<KaizenSDK.TemplateViewModelState> { get set }
+}
+public struct KZStyleMatchDetailModel {
+}
+public protocol MatchDetailRoutingLogic {
+  func start()
+  var matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel { get set }
+}
+public struct MatchDetailViewBuilder {
+  public static func inject(with navigationController: UIKit.UINavigationController) -> KaizenSDK.MatchDetailRoutingLogic
+}
+public struct SummaryUseCaseBuilder {
+}
+public struct StatsUseCaseBuilder {
+}
+public struct TemplateUseCaseBuilder {
+}
+@objc public class StatsViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc public class PitchViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public protocol StatisticsRoutingLogic {
+  func start() -> UIKit.UIViewController
+}
+public struct StatisticsViewBuilder {
+  public static func inject() -> KaizenSDK.StatisticsRoutingLogic
+}
+public struct TemplateProviderBuilder {
+}
+@objc @_inheritsConvenienceInitializers open class TabPageViewController : UIKit.UIPageViewController {
+  open var isInfinity: Swift.Bool
+  open var tabItems: [(viewController: UIKit.UIViewController, title: Swift.String)] {
+    get
+    set
+  }
+  public static func create() -> KaizenSDK.TabPageViewController?
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension TabPageViewController {
+  public func displayControllerWithIndex(_ index: Swift.Int, direction: UIKit.UIPageViewController.NavigationDirection, animated: Swift.Bool)
+}
+extension TabPageViewController {
+  public func updateNavigationBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool)
+  public func showNavigationBar()
+}
+extension TabPageViewController : UIKit.UIPageViewControllerDataSource {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+}
+extension TabPageViewController : UIKit.UIPageViewControllerDelegate {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+}
+extension TabPageViewController : UIKit.UIScrollViewDelegate {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+}
+@objc public class StandingsViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+public protocol TemplateViewContract {
+  var viewModel: KaizenSDK.TemplateViewModelContract? { get set }
+}
+@objc public class TemplateViewComponent : KaizenSDK.BaseComponent, KaizenSDK.TemplateViewContract {
+  override public var xibName: Swift.String? {
+    get
+  }
+  weak public var viewModel: KaizenSDK.TemplateViewModelContract?
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+extension KaizenSDK.UseCaseError : Swift.Equatable {}
+extension KaizenSDK.UseCaseError : Swift.Hashable {}
