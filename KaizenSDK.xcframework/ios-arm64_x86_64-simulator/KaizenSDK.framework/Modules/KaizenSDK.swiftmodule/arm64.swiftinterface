@@ -26,13 +26,14 @@ public enum UseCaseError : Swift.Error {
   }
   public func hash(into hasher: inout Swift.Hasher)
 }
-@objc public class MatchViewComponent : KaizenSDK.BaseComponent {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MatchViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func initializeView()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
 public struct PitchComponentUseCaseBuilder {
 }
@@ -49,35 +50,38 @@ extension Encodable {
   public func jsonString(encoding: Swift.String.Encoding = .utf8) throws -> Swift.String?
   public func jsonDictonary() throws -> [Swift.String : Any]?
 }
-@objc @_inheritsConvenienceInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate {
   open var xibName: Swift.String? {
     get
   }
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  open func initializeView()
   open func calculateContentSize(to contentView: UIKit.UIView) -> (width: Swift.Double, height: Swift.Double)
   @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   @objc deinit
 }
-@objc public class LineUpsViewComponent : KaizenSDK.BaseComponent {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class LineUpsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func initializeView()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
 public struct MatchUseCaseBuilder {
 }
 public struct LineUpsUseCaseBuilder {
 }
-@objc public class SummaryViewComponent : KaizenSDK.BaseComponent {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SummaryViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func initializeView()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
 final public class Observable<Value> {
   final public var value: Value {
@@ -113,21 +117,23 @@ public struct StatsUseCaseBuilder {
 }
 public struct TemplateUseCaseBuilder {
 }
-@objc public class StatsViewComponent : KaizenSDK.BaseComponent {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func initializeView()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
-@objc public class PitchViewComponent : KaizenSDK.BaseComponent {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PitchViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func initializeView()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
 public protocol StatisticsRoutingLogic {
   func start() -> UIKit.UIViewController
@@ -171,18 +177,19 @@ extension TabPageViewController : UIKit.UIScrollViewDelegate {
   @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
   @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
 }
-@objc public class StandingsViewComponent : KaizenSDK.BaseComponent {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StandingsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func initializeView()
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
 public protocol TemplateViewContract {
   var viewModel: KaizenSDK.TemplateViewModelContract? { get set }
 }
-@objc public class TemplateViewComponent : KaizenSDK.BaseComponent, KaizenSDK.TemplateViewContract {
+@objc @_hasMissingDesignatedInitializers public class TemplateViewComponent : KaizenSDK.BaseComponent, KaizenSDK.TemplateViewContract {
   override public var xibName: Swift.String? {
     get
   }
