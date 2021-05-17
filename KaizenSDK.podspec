@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KaizenSDK'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'KaizenSDK is a software development kit (SDK) for iOS gaming apps'
 
 
@@ -12,10 +12,11 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Pretty Technical' => 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git' }
-  s.source           = { :git => 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git',  :tag => "0.0.5" }
-  s.ios.deployment_target = '11.0'
+  s.source           = { :git => 'https://github.com/danielcPrettytechnical/KaizenSDKTest.git',  :tag => "0.0.6" }
+  s.ios.deployment_target = '12.0'
   s.ios.vendored_frameworks = 'KaizenSDK.xcframework'
   s.swift_version = "5" 
   # s.dependency 'SwiftyBeaver'
   s.dependency 'Alamofire'
+  s.dependency 'FloatingPanel'
 end

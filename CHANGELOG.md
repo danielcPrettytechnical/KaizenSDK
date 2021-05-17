@@ -15,3 +15,10 @@
 
 ## Version 0.0.5
 - Implement dynamic tabs
+
+## Version 0.0.6
+- Minimum support to iOS 12
+- Refactor dynamic tabs and add floating panel
+- Detailed stats on the dynamic tabs.
+- Loading and fallback states for components.
+- Dynamic tabs can now we customize by a KZMatchDetailModel

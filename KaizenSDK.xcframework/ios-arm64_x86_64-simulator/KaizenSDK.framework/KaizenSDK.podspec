@@ -12,11 +12,12 @@ Pod::Spec.new do |s|
   s.author           = { 'Pretty Technical' => 'https://gitlab.com/prettytechnical/kaizen/ios-sdk.git' }
   s.source           =  { :path => '.' }
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'KaizenSDK/**/*'
   # s.dependency 'SwiftyBeaver'
   s.dependency 'Alamofire'
+  s.dependency 'FloatingPanel', '2.2.0'
   s.swift_version = "5" 
   s.exclude_files = [ './Pods', './Podfile', './Podfile.lock', 'KaizenSDK/**/*.plist' ]
 end

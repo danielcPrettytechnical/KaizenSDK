@@ -225,6 +225,22 @@ SWIFT_CLASS("_TtC9KaizenSDK13BaseComponent")
 
 
 
+SWIFT_CLASS("_TtC9KaizenSDK26DetailedStatsViewComponent")
+@interface DetailedStatsViewComponent : BaseComponent
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC9KaizenSDK16H2HViewComponent")
+@interface H2HViewComponent : BaseComponent
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 SWIFT_CLASS("_TtC9KaizenSDK20LineUpsViewComponent")
 @interface LineUpsViewComponent : BaseComponent
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -543,6 +559,22 @@ SWIFT_CLASS("_TtC9KaizenSDK13BaseComponent")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
+@end
+
+
+
+SWIFT_CLASS("_TtC9KaizenSDK26DetailedStatsViewComponent")
+@interface DetailedStatsViewComponent : BaseComponent
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC9KaizenSDK16H2HViewComponent")
+@interface H2HViewComponent : BaseComponent
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

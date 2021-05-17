@@ -1,12 +1,25 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
 import Alamofire
+import FloatingPanel
 import Foundation
 @_exported import KaizenSDK
 import Swift
 import UIKit
 import WebKit
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DetailedStatsViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  override public var withScroll: Swift.Bool {
+    get
+  }
+  override public func initializeView()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
 public struct StandingsUseCaseBuilder {
 }
 @_hasMissingDesignatedInitializers public class BaseUseCase {
@@ -37,6 +50,19 @@ public enum UseCaseError : Swift.Error {
 }
 public struct PitchComponentUseCaseBuilder {
 }
+public struct H2HUseCaseBuilder {
+}
+public struct DetailedStatsUseCaseBuilder {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class H2HViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  override public func initializeView()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
 public struct MatchDetailUseCaseBuilder {
 }
 public typealias BaseEntity = Swift.Codable & KaizenSDK.PresentationTransformable
@@ -52,6 +78,9 @@ extension Encodable {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate {
   open var xibName: Swift.String? {
+    get
+  }
+  open var withScroll: Swift.Bool {
     get
   }
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
@@ -76,6 +105,9 @@ public struct LineUpsUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SummaryViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
+    get
+  }
+  override public var withScroll: Swift.Bool {
     get
   }
   override public func initializeView()
@@ -103,13 +135,16 @@ public protocol TemplateViewModelContract : AnyObject {
   var viewState: KaizenSDK.Observable<KaizenSDK.TemplateViewModelState> { get set }
 }
 public struct KZStyleMatchDetailModel {
+  public init(highlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Bold",
+                                                size: 12.0), unHighlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Regular",
+                                                  size: 12.0))
 }
 public protocol MatchDetailRoutingLogic {
   func start()
   var matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel { get set }
 }
 public struct MatchDetailViewBuilder {
-  public static func inject(with navigationController: UIKit.UINavigationController) -> KaizenSDK.MatchDetailRoutingLogic
+  public static func inject(with navigationController: UIKit.UINavigationController, matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel = KZStyleMatchDetailModel()) -> KaizenSDK.MatchDetailRoutingLogic
 }
 public struct SummaryUseCaseBuilder {
 }
