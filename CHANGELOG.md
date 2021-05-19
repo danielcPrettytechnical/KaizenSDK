@@ -22,3 +22,5 @@
 - Detailed stats on the dynamic tabs.
 - Loading and fallback states for components.
 - Dynamic tabs can now we customize by a KZMatchDetailModel
+- Fix memory leaks in dynamic tabs
+- add dismiss method in dynamic tabs
