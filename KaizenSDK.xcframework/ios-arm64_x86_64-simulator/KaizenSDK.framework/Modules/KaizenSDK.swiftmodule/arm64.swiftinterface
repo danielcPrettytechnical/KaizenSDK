@@ -12,10 +12,8 @@ import WebKit
   override public var xibName: Swift.String? {
     get
   }
-  override public var withScroll: Swift.Bool {
-    get
-  }
   override public func initializeView()
+  public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -44,6 +42,7 @@ public enum UseCaseError : Swift.Error {
     get
   }
   override public func initializeView()
+  public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -59,6 +58,7 @@ public struct DetailedStatsUseCaseBuilder {
     get
   }
   override public func initializeView()
+  public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -76,17 +76,28 @@ extension Encodable {
   public func jsonString(encoding: Swift.String.Encoding = .utf8) throws -> Swift.String?
   public func jsonDictonary() throws -> [Swift.String : Any]?
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate {
+public enum KZStateComponentViewState {
+  case show
+  case loading
+  case noInternetConnection
+  case mapping
+  case underlying(context: Swift.String)
+  case readyState
+}
+public protocol KZStateComponentDelegate : AnyObject {
+  func changeViewState(_ state: KaizenSDK.KZStateComponentViewState, component: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
   open var xibName: Swift.String? {
     get
   }
-  open var withScroll: Swift.Bool {
-    get
-  }
+  weak public var delegate: KaizenSDK.KZStateComponentDelegate?
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   open func initializeView()
-  open func calculateContentSize(to contentView: UIKit.UIView) -> (width: Swift.Double, height: Swift.Double)
+  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
   @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   @objc deinit
 }
@@ -95,6 +106,7 @@ extension Encodable {
     get
   }
   override public func initializeView()
+  public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -107,10 +119,8 @@ public struct LineUpsUseCaseBuilder {
   override public var xibName: Swift.String? {
     get
   }
-  override public var withScroll: Swift.Bool {
-    get
-  }
   override public func initializeView()
+  public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -134,8 +144,10 @@ public enum TemplateViewModelState {
 public protocol TemplateViewModelContract : AnyObject {
   var viewState: KaizenSDK.Observable<KaizenSDK.TemplateViewModelState> { get set }
 }
-public struct KZStyleMatchDetailModel {
-  public init(highlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Bold",
+public struct KZStyleMatchDetailModel : KaizenSDK.KZSharedProtocolModel {
+  public let lang: KaizenSDK.LanguageKey
+  public let identifier: Swift.String
+  public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english, highlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Bold",
                                                 size: 12.0), unHighlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Regular",
                                                   size: 12.0))
 }
@@ -145,19 +157,18 @@ public protocol MatchDetailRoutingLogic : AnyObject {
   var matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel { get set }
 }
 public struct MatchDetailViewBuilder {
-  public static func inject(with navigationController: UIKit.UINavigationController, matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel = KZStyleMatchDetailModel()) -> KaizenSDK.MatchDetailRoutingLogic
+  public static func inject(with navigationController: UIKit.UINavigationController?, matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel) -> KaizenSDK.MatchDetailRoutingLogic
 }
 public struct SummaryUseCaseBuilder {
 }
 public struct StatsUseCaseBuilder {
-}
-public struct TemplateUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
   override public func initializeView()
+  public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -167,17 +178,10 @@ public struct TemplateUseCaseBuilder {
     get
   }
   override public func initializeView()
+  public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-}
-public protocol StatisticsRoutingLogic : AnyObject {
-  func start() -> UIKit.UIViewController
-}
-public struct StatisticsViewBuilder {
-  public static func inject() -> KaizenSDK.StatisticsRoutingLogic
-}
-public struct TemplateProviderBuilder {
 }
 @objc @_inheritsConvenienceInitializers open class TabPageViewController : UIKit.UIPageViewController {
   open var isInfinity: Swift.Bool
@@ -218,9 +222,32 @@ extension TabPageViewController : UIKit.UIScrollViewDelegate {
     get
   }
   override public func initializeView()
+  public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+public protocol KZSharedProtocolModel {
+  var identifier: Swift.String { get }
+  var lang: KaizenSDK.LanguageKey { get }
+}
+public struct KZViewModel : KaizenSDK.KZSharedProtocolModel {
+  public let identifier: Swift.String
+  public let lang: KaizenSDK.LanguageKey
+  public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english)
+}
+public enum LanguageKey : Swift.String {
+  case english
+  case greek
+  case german
+  case portuguese
+  case brazilian
+  case bulgarian
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
 }
 public protocol TemplateViewContract {
   var viewModel: KaizenSDK.TemplateViewModelContract? { get set }
@@ -236,3 +263,6 @@ public protocol TemplateViewContract {
 }
 extension KaizenSDK.UseCaseError : Swift.Equatable {}
 extension KaizenSDK.UseCaseError : Swift.Hashable {}
+extension KaizenSDK.LanguageKey : Swift.Equatable {}
+extension KaizenSDK.LanguageKey : Swift.Hashable {}
+extension KaizenSDK.LanguageKey : Swift.RawRepresentable {}

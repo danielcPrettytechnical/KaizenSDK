@@ -24,3 +24,9 @@
 - Dynamic tabs can now we customize by a KZMatchDetailModel
 - Fix memory leaks in dynamic tabs
 - add dismiss method in dynamic tabs
+
+## Version 0.0.7
+
+- Configure method for custom components.
+- Delegate method to capture fallbacks states. 
+- Language key to custom kaizen model.

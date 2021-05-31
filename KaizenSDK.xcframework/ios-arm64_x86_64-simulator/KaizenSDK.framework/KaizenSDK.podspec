@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KaizenSDK'
-  s.version          = '0.0.5'
+  s.version          = '0.0.7'
   s.summary          = 'A software development kit (SDK) for iOS gaming apps'
   s.description      = '<<-DESC A software development kit (SDK) for iOS gaming apps that implements the platform’s main features: login, sign up, get the game list and launch games. 
   The SDK simplifies the development of new gaming apps and manages all the backend connections.
