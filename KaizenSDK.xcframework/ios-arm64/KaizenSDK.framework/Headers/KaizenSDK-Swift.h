@@ -260,6 +260,14 @@ SWIFT_CLASS("_TtC9KaizenSDK18MatchViewComponent")
 
 
 
+SWIFT_CLASS("_TtC9KaizenSDK21MomentumViewComponent")
+@interface MomentumViewComponent : BaseComponent
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 SWIFT_CLASS("_TtC9KaizenSDK18PitchViewComponent")
 @interface PitchViewComponent : BaseComponent
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -303,18 +311,18 @@ SWIFT_CLASS("_TtC9KaizenSDK21TabPageViewController")
 @end
 
 
-@class UIViewController;
-
-@interface TabPageViewController (SWIFT_EXTENSION(KaizenSDK)) <UIPageViewControllerDelegate>
-- (void)pageViewController:(UIPageViewController * _Nonnull)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> * _Nonnull)pendingViewControllers;
-- (void)pageViewController:(UIPageViewController * _Nonnull)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> * _Nonnull)previousViewControllers transitionCompleted:(BOOL)completed;
-@end
-
 @class UIScrollView;
 
 @interface TabPageViewController (SWIFT_EXTENSION(KaizenSDK)) <UIScrollViewDelegate>
 - (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 - (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
+@end
+
+@class UIViewController;
+
+@interface TabPageViewController (SWIFT_EXTENSION(KaizenSDK)) <UIPageViewControllerDelegate>
+- (void)pageViewController:(UIPageViewController * _Nonnull)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> * _Nonnull)pendingViewControllers;
+- (void)pageViewController:(UIPageViewController * _Nonnull)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> * _Nonnull)previousViewControllers transitionCompleted:(BOOL)completed;
 @end
 
 

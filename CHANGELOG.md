@@ -30,3 +30,8 @@
 - Configure method for custom components.
 - Delegate method to capture fallbacks states. 
 - Language key to custom kaizen model.
+
+## Version 0.0.8
+
+- Momentum component
+- Translation for match detail view and Language key to logic to component.

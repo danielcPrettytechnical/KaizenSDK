@@ -173,6 +173,16 @@ public struct StatsUseCaseBuilder {
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MomentumViewComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  override public func initializeView()
+  public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PitchViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
@@ -182,6 +192,8 @@ public struct StatsUseCaseBuilder {
   @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+public struct MomentumUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers open class TabPageViewController : UIKit.UIPageViewController {
   open var isInfinity: Swift.Bool
