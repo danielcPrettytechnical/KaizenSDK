@@ -270,6 +270,7 @@ SWIFT_CLASS("_TtC9KaizenSDK21MomentumViewComponent")
 
 
 
+
 SWIFT_CLASS("_TtC9KaizenSDK18PitchViewComponent")
 @interface PitchViewComponent : BaseComponent
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -334,12 +335,6 @@ SWIFT_CLASS("_TtC9KaizenSDK21TabPageViewController")
 @end
 
 
-
-SWIFT_CLASS("_TtC9KaizenSDK21TemplateViewComponent")
-@interface TemplateViewComponent : BaseComponent
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
 
 
 
@@ -621,6 +616,7 @@ SWIFT_CLASS("_TtC9KaizenSDK21MomentumViewComponent")
 
 
 
+
 SWIFT_CLASS("_TtC9KaizenSDK18PitchViewComponent")
 @interface PitchViewComponent : BaseComponent
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -685,12 +681,6 @@ SWIFT_CLASS("_TtC9KaizenSDK21TabPageViewController")
 @end
 
 
-
-SWIFT_CLASS("_TtC9KaizenSDK21TemplateViewComponent")
-@interface TemplateViewComponent : BaseComponent
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
 
 
 

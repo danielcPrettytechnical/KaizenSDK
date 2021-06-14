@@ -35,3 +35,7 @@
 
 - Momentum component
 - Translation for match detail view and Language key to logic to component.
+
+## Version 1.0.0
+- Custom Empty state component if there is a error in match detail.
+- Improvements 

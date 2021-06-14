@@ -23,8 +23,6 @@ public struct StandingsUseCaseBuilder {
 @_hasMissingDesignatedInitializers public class BaseUseCase {
   @objc deinit
 }
-public struct TemplatePresentationModel {
-}
 public struct StatisticsUseCaseBuilder {
 }
 public enum UseCaseError : Swift.Error {
@@ -135,15 +133,6 @@ final public class Observable<Value> {
   final public func remove(observer: Swift.AnyObject)
   @objc deinit
 }
-public struct TemplateViewModelBuilder {
-}
-public enum TemplateViewModelState {
-  case loading
-  case show(KaizenSDK.TemplatePresentationModel)
-}
-public protocol TemplateViewModelContract : AnyObject {
-  var viewState: KaizenSDK.Observable<KaizenSDK.TemplateViewModelState> { get set }
-}
 public struct KZStyleMatchDetailModel : KaizenSDK.KZSharedProtocolModel {
   public let lang: KaizenSDK.LanguageKey
   public let identifier: Swift.String
@@ -158,6 +147,12 @@ public protocol MatchDetailRoutingLogic : AnyObject {
 }
 public struct MatchDetailViewBuilder {
   public static func inject(with navigationController: UIKit.UINavigationController?, matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel) -> KaizenSDK.MatchDetailRoutingLogic
+}
+public protocol CustomState {
+  var image: UIKit.UIImage? { get }
+  var title: Swift.String? { get }
+  var description: Swift.String? { get }
+  var titleButton: Swift.String? { get }
 }
 public struct SummaryUseCaseBuilder {
 }
@@ -260,18 +255,6 @@ public enum LanguageKey : Swift.String {
     get
   }
   public init?(rawValue: Swift.String)
-}
-public protocol TemplateViewContract {
-  var viewModel: KaizenSDK.TemplateViewModelContract? { get set }
-}
-@objc @_hasMissingDesignatedInitializers public class TemplateViewComponent : KaizenSDK.BaseComponent, KaizenSDK.TemplateViewContract {
-  override public var xibName: Swift.String? {
-    get
-  }
-  weak public var viewModel: KaizenSDK.TemplateViewModelContract?
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-  @objc override dynamic public init(frame: CoreGraphics.CGRect)
 }
 extension KaizenSDK.UseCaseError : Swift.Equatable {}
 extension KaizenSDK.UseCaseError : Swift.Hashable {}
