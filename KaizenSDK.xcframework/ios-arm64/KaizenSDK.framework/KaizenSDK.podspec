@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
 
   s.source_files = ['KaizenSDK/**/*.{h,m,swift,xib,storyboard, xcassets}']
-  # s.dependency 'SwiftyBeaver'
   s.dependency 'Alamofire'
   s.dependency 'FloatingPanel', '2.2.0'
   s.swift_version = "5" 

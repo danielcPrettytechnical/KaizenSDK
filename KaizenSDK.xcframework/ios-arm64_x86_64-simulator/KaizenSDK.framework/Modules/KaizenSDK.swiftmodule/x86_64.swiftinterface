@@ -23,6 +23,18 @@ public struct StandingsUseCaseBuilder {
 @_hasMissingDesignatedInitializers public class BaseUseCase {
   @objc deinit
 }
+extension TabPageViewController : UIKit.UIPageViewControllerDataSource {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+}
+extension TabPageViewController : UIKit.UIPageViewControllerDelegate {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+}
+extension TabPageViewController : UIKit.UIScrollViewDelegate {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+}
 public struct StatisticsUseCaseBuilder {
 }
 public enum UseCaseError : Swift.Error {
@@ -136,9 +148,10 @@ final public class Observable<Value> {
 public struct KZStyleMatchDetailModel : KaizenSDK.KZSharedProtocolModel {
   public let lang: KaizenSDK.LanguageKey
   public let identifier: Swift.String
+  public let progressIndicatorColor: [UIKit.UIColor]
   public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english, highlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Bold",
                                                 size: 12.0), unHighlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Regular",
-                                                  size: 12.0))
+                                                  size: 12.0), progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor)
 }
 public protocol MatchDetailRoutingLogic : AnyObject {
   func start()
@@ -212,18 +225,6 @@ extension TabPageViewController {
   public func updateNavigationBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool)
   public func showNavigationBar()
 }
-extension TabPageViewController : UIKit.UIPageViewControllerDataSource {
-  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
-  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
-}
-extension TabPageViewController : UIKit.UIPageViewControllerDelegate {
-  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
-  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
-}
-extension TabPageViewController : UIKit.UIScrollViewDelegate {
-  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StandingsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
@@ -237,11 +238,14 @@ extension TabPageViewController : UIKit.UIScrollViewDelegate {
 public protocol KZSharedProtocolModel {
   var identifier: Swift.String { get }
   var lang: KaizenSDK.LanguageKey { get }
+  var progressIndicatorColor: [UIKit.UIColor] { get }
 }
+public let kzSDKDefaultProgressIndicatorColor: [UIKit.UIColor]
 public struct KZViewModel : KaizenSDK.KZSharedProtocolModel {
   public let identifier: Swift.String
   public let lang: KaizenSDK.LanguageKey
-  public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english)
+  public let progressIndicatorColor: [UIKit.UIColor]
+  public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english, progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor)
 }
 public enum LanguageKey : Swift.String {
   case english
