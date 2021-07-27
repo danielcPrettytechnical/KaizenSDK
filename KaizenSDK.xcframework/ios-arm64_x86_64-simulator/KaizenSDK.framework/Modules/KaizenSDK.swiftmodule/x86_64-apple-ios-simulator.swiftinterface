@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
 import Alamofire
 import FloatingPanel
@@ -14,9 +14,9 @@ import WebKit
   }
   override public func initializeView()
   public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 public struct StandingsUseCaseBuilder {
 }
@@ -42,10 +42,10 @@ public enum UseCaseError : Swift.Error {
   case network
   case underlying
   public static func == (a: KaizenSDK.UseCaseError, b: KaizenSDK.UseCaseError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MatchViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
@@ -53,9 +53,9 @@ public enum UseCaseError : Swift.Error {
   }
   override public func initializeView()
   public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 public struct PitchComponentUseCaseBuilder {
 }
@@ -69,9 +69,9 @@ public struct DetailedStatsUseCaseBuilder {
   }
   override public func initializeView()
   public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 public struct MatchDetailUseCaseBuilder {
 }
@@ -117,9 +117,9 @@ public protocol KZStateComponentDelegate : AnyObject {
   }
   override public func initializeView()
   public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 public struct MatchUseCaseBuilder {
 }
@@ -131,9 +131,9 @@ public struct LineUpsUseCaseBuilder {
   }
   override public func initializeView()
   public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 final public class Observable<Value> {
   final public var value: Value {
@@ -177,9 +177,9 @@ public struct StatsUseCaseBuilder {
   }
   override public func initializeView()
   public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MomentumViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
@@ -187,9 +187,9 @@ public struct StatsUseCaseBuilder {
   }
   override public func initializeView()
   public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PitchViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
@@ -197,9 +197,9 @@ public struct StatsUseCaseBuilder {
   }
   override public func initializeView()
   public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 public struct MomentumUseCaseBuilder {
 }
@@ -214,9 +214,9 @@ public struct MomentumUseCaseBuilder {
   @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
   @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
   @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
-  @objc deinit
   @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
 }
 extension TabPageViewController {
   public func displayControllerWithIndex(_ index: Swift.Int, direction: UIKit.UIPageViewController.NavigationDirection, animated: Swift.Bool)
@@ -231,9 +231,9 @@ extension TabPageViewController {
   }
   override public func initializeView()
   public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
-  @objc deinit
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
 }
 public protocol KZSharedProtocolModel {
   var identifier: Swift.String { get }
@@ -254,11 +254,11 @@ public enum LanguageKey : Swift.String {
   case portuguese
   case brazilian
   case bulgarian
+  public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
-  public init?(rawValue: Swift.String)
 }
 extension KaizenSDK.UseCaseError : Swift.Equatable {}
 extension KaizenSDK.UseCaseError : Swift.Hashable {}

@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		cPQ/OLMRv2RXCwgw42gFuC2vij8=
+		ba5KQen3Pv55NsQVZ3Z3A+ZCcBw=
 		</data>
 		<key>CHANGELOG</key>
 		<data>
@@ -18,27 +18,27 @@
 		</data>
 		<key>DetailedStatsView.nib</key>
 		<data>
-		TNhTVH9d4DBnIoe2XQ9Rcjdu2eA=
+		cA9a1uDFA7i3dAE7qBwdSPz0xIw=
 		</data>
 		<key>DetailedStatsViewComponent.nib</key>
 		<data>
-		3UW331/ncKjdqvCwwjbFeEo97TA=
+		NJEuAcyIvSLwMu8EfKk+8ZJnvZk=
 		</data>
 		<key>EmptyStateView.nib</key>
 		<data>
-		WtG+NDjhYcnKh1iqq6OUDNOepvQ=
+		R//AZ3tNLz3bb6OYTb6E+C1tguM=
 		</data>
 		<key>H2HView.nib</key>
 		<data>
-		EC44eu6WZg4iRyfff6kK5f/9qws=
+		HfES+KWP4n1joFf6+6iROY9ROQU=
 		</data>
 		<key>H2HViewComponent.nib</key>
 		<data>
-		fyyocdqKGa6RLsOBLEYYo5zX13k=
+		emZUkb0IqOwbN1ai5OvwNTOZymM=
 		</data>
 		<key>Headers/KaizenSDK-Swift.h</key>
 		<data>
-		Msx97lPo9ZZsN4B16me0Xp6Sg4Q=
+		ts65eFleI1wDjS18wZjkH+x4bWE=
 		</data>
 		<key>Headers/KaizenSDK.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		v3//y3AwrzATGgMfkP93ASfn3Vo=
+		5qY18uv1DfidYlDXV91hr5E+fPs=
 		</data>
 		<key>KaizenSDK.podspec</key>
 		<data>
@@ -54,71 +54,71 @@
 		</data>
 		<key>LineUpsView.nib</key>
 		<data>
-		v1xNeOU1/xyfxUbpQwalNB0d69w=
+		lchsUKRuqeDQK2PeDNzNwmO4en8=
 		</data>
 		<key>LineUpsViewComponent.nib</key>
 		<data>
-		HmSJqeI9R300ONL6dFwqA3bBtfI=
+		WrHr0H/6Pe6YG7b8e5/jG85LcPw=
 		</data>
 		<key>MatchDetailView.nib</key>
 		<data>
-		ytGX9Dt9s5gX0vPAwB2iedY0Xqc=
+		45BX8KMZf/Cow4dcgoGWGITS4gg=
 		</data>
 		<key>MatchView.nib</key>
 		<data>
-		KMuyxEHU/ivPLapNV2GNCHKCOPY=
+		oXtdD9EE8dTczCd3JsnYQyhfJmY=
 		</data>
 		<key>MatchViewComponent.nib</key>
 		<data>
-		wcKB1qWJ/sjPbLZUKSY91VU3hkc=
+		6ATniqr28raeCKDyx4eP2Uh8aJU=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		p0OcbJMPpshW/36KpAOlNAYi890=
+		xIX1WK7GhMRUpyLAApLN2W/TQDI=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		v9XfphifDFSqYmAXju3le4HhPq8=
+		h55ButqG+IxNX8wvAiT40wKeP/4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xq3h8joWbNQrpNPqHXR19iab6QU=
+		UY5+fqm/gwQLglayCpW43zrjFR4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		p0OcbJMPpshW/36KpAOlNAYi890=
+		xIX1WK7GhMRUpyLAApLN2W/TQDI=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		v9XfphifDFSqYmAXju3le4HhPq8=
+		h55ButqG+IxNX8wvAiT40wKeP/4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		xq3h8joWbNQrpNPqHXR19iab6QU=
+		UY5+fqm/gwQLglayCpW43zrjFR4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		T6uVFxBubsP0m+b3H9akuEJAHsE=
+		SOLaUXtMwAT28qdx8pyB8A2j/Yc=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		VtqqEFCiCaiLP2C181tID2AO4XY=
+		FqNvnczgT15jdsS3dI0hdWb72T8=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qgiNCwYh133WTvWBFB9+ulZdlBE=
+		31pUdby9ZVHnAoEBr0qWu6C+mzI=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		T6uVFxBubsP0m+b3H9akuEJAHsE=
+		SOLaUXtMwAT28qdx8pyB8A2j/Yc=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		VtqqEFCiCaiLP2C181tID2AO4XY=
+		FqNvnczgT15jdsS3dI0hdWb72T8=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		qgiNCwYh133WTvWBFB9+ulZdlBE=
+		31pUdby9ZVHnAoEBr0qWu6C+mzI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -126,11 +126,11 @@
 		</data>
 		<key>MomentumViewComponent.nib</key>
 		<data>
-		qQK9OxKib0ENhp3gsummXxpYHrY=
+		1A6B5pO2oYNOFMLFYAzN2mQMrp8=
 		</data>
 		<key>PitchViewComponent.nib</key>
 		<data>
-		Qz18s6olb4e+D2Fonl0RkxxfKoQ=
+		Z/CIUDX962VJiW3F2fo6RSMS/f4=
 		</data>
 		<key>README.md</key>
 		<data>
@@ -138,31 +138,31 @@
 		</data>
 		<key>StandingsView.nib</key>
 		<data>
-		wh45HytDjEW/4vmamCTUimx+Ey8=
+		u+3S9qzc+9ugexsQZHg8B8eD3NA=
 		</data>
 		<key>StandingsViewComponent.nib</key>
 		<data>
-		hRNCyYbIHZYBrtpAaygCRBjQ9pU=
+		nP2t8SWY7FQoPUtebNZktrnareM=
 		</data>
 		<key>StatisticsView.nib</key>
 		<data>
-		9n/27u1lpKM/y7hfUwBUfjzV6PE=
+		UhtyVNIM/ZHdvpjNV74untg0rLo=
 		</data>
 		<key>StatsViewComponent.nib</key>
 		<data>
-		RGVVzktIPLzQ5nj4MlsERmNdtzI=
+		d45vhW6NFWssep3UeqVwCrZf8Wc=
 		</data>
 		<key>SummaryViewComponent.nib</key>
 		<data>
-		Gndda2W/iAugjwHnr17GPyxcMCw=
+		TshctT7ZhBq+ZfJeNYIomfZBSUw=
 		</data>
 		<key>TabCollectionCell.nib/objects-12.3+.nib</key>
 		<data>
-		x3WCvodlM8fjmBaew47oCp2Gp2o=
+		dAN76h/uL71RdH1Apui2kZT2WR4=
 		</data>
 		<key>TabCollectionCell.nib/runtime.nib</key>
 		<data>
-		aQGSqKKUqslZF3zMBzNoCopMJKI=
+		1eElkVUZplpt+Qp2qZZQ28hpsSU=
 		</data>
 		<key>TabPageViewController.storyboardc/Info.plist</key>
 		<data>
@@ -170,11 +170,11 @@
 		</data>
 		<key>TabPageViewController.storyboardc/TabPageViewController.nib</key>
 		<data>
-		oI522Jk6DPelg5ycpB3SOiECAgA=
+		HF9Vrr9yMYjiR+6+3DLtuz3q8Lo=
 		</data>
 		<key>TabView.nib</key>
 		<data>
-		MHfiTVtmaZVEHo5iziDr/h81XLs=
+		sHgUJxw5wTnfbZ0zXSHWRfIDlTA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -190,7 +190,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fSt8vCxwe1TEFwXFrMG1Exb7W+FwCKmHmgUx4hD0s/8=
+			gbnFS6PK8Sxep3FRO3uut0RmSUewCXeQ5Czj5ETVEGY=
 			</data>
 		</dict>
 		<key>CHANGELOG</key>
@@ -204,42 +204,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UEJ9pOVqLNKMKt4lt0zJJCIqNS+5uisZTUZV1mQgeJQ=
+			+NEInUvwnNaCL8wBv+QznDSEAr1pRMrxNGPUdOCfzIs=
 			</data>
 		</dict>
 		<key>DetailedStatsViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EZ2EInJK7zefmKz7DedR2gClZJR44Ztyiza0ysgZP7Q=
+			pAMH6ltqC7vZqspu5jpsAsdA798EEME+1fpBub2TvkQ=
 			</data>
 		</dict>
 		<key>EmptyStateView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sbBbwIzARSu5Amfx4oKKwkyWJW1YtNoVcZw+94IWBiE=
+			ew2iof4GfW/5a2yHhew29syo8vNGYfuKHkxtgGEc8rw=
 			</data>
 		</dict>
 		<key>H2HView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iemYuGEUALe7yKTAIxvAYXKpZM23nqaxiHMbihmE9Ks=
+			UOebNuh3USbkNFNuCDaeLezNBz9DI1oIEPO7OdzFDrA=
 			</data>
 		</dict>
 		<key>H2HViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B7JqnE+aBbxTSyF9brDE9bXX/vvCSRiViZ8F+BdmwJg=
+			MWxKnH1YNR09qivxl615VrFGQtSsx/k/aDuZwbM+hig=
 			</data>
 		</dict>
 		<key>Headers/KaizenSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TUIYeLAAMfid7p06TP6GsjkXvs/32LK05NBgcSREPzQ=
+			W296a2d7cV7074EukQGAli1kIuUAJYz/UvHEfDY7RYg=
 			</data>
 		</dict>
 		<key>Headers/KaizenSDK.h</key>
@@ -260,119 +260,119 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zKsU5qlwQXpeQdYou/UcexpIQbuTIwc9Cq9xGT84lYI=
+			LGGeFYUdMK5kZZkDdLX1A6VgoHt0LahuolVRjLZIvgk=
 			</data>
 		</dict>
 		<key>LineUpsViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6pmYvlHL/9ohmmsjlbhXJywCf6hJgekJ68zGEXMIxrI=
+			v799eqfu30ada0u53c6AJKSYnHA/THaP5yB8sFRTA6s=
 			</data>
 		</dict>
 		<key>MatchDetailView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ew0Rk0rmKX5AtcAz7qHJt2XZMNimYpbLi27qmLxENig=
+			IN+BKpR6EL8tp3Y+RxAcoI/GU1CRqWBd3RPUDtuxzjM=
 			</data>
 		</dict>
 		<key>MatchView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fYwgaOAxCTWE0wU1AD2GIAtgK7OLMJaFC+MRe1HuySg=
+			ltbFt7w14MBJ9uAg5mxmSIjboolfkEOswSfikCwmors=
 			</data>
 		</dict>
 		<key>MatchViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H81l0OA2+tU1n6bXbmKcVdT4gvRKd+4OGGvJNiUayso=
+			BqNdOQdDUi6Q/kaiHSrWVU88QXjMN/eRWwTMxT44jUI=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sf1xm3IzWXyd6O5+dHmw8yq2R2WlDP+lx08GEAy4bJU=
+			9rE5eOEhL7ol4trHcTNsyZ2+rcZ2ur6o1eFDjX87hFg=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f6iNg4jpAIYtPK6/DEAABkyez9ejYjz8Ot+I+fOg4s8=
+			99ZuMBxW9B25OLE9vqHUs+xW7QgVkIF3JrAGq58apr4=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ef5ku15u6vPFcD77Y32Lbozz2n4gKkTMB2f5HUZpUI=
+			cYrtlK8d6fzrETV5ike1oW6pzZ3ueZObV8qAxnpcYjE=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sf1xm3IzWXyd6O5+dHmw8yq2R2WlDP+lx08GEAy4bJU=
+			9rE5eOEhL7ol4trHcTNsyZ2+rcZ2ur6o1eFDjX87hFg=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f6iNg4jpAIYtPK6/DEAABkyez9ejYjz8Ot+I+fOg4s8=
+			99ZuMBxW9B25OLE9vqHUs+xW7QgVkIF3JrAGq58apr4=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ef5ku15u6vPFcD77Y32Lbozz2n4gKkTMB2f5HUZpUI=
+			cYrtlK8d6fzrETV5ike1oW6pzZ3ueZObV8qAxnpcYjE=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6GgdhzbLUuC1ZQDY2UooM7/SdKK4WEksR5Lq8FiI6B8=
+			+6IJVEGdSyRVKfe5iqnjG4LlJQCjbmpmSSITcnTOKsQ=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wh6Ur0lV3ea6GCCKlEPS7AtLa1Lx4D+n16KjYaa0C9o=
+			nPBaiHJ235hxHuLhRwue/+VKKAaDd/Utqxh6uuKl1RI=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3PhNVQe6BqdwKJL/ZfXYmlwpM4HzGcweVbOOXreKGHc=
+			wW3UE3aNv4pHoukgl9bSxHqFrL7rx6ocgOlOCVqWkag=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6GgdhzbLUuC1ZQDY2UooM7/SdKK4WEksR5Lq8FiI6B8=
+			+6IJVEGdSyRVKfe5iqnjG4LlJQCjbmpmSSITcnTOKsQ=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wh6Ur0lV3ea6GCCKlEPS7AtLa1Lx4D+n16KjYaa0C9o=
+			nPBaiHJ235hxHuLhRwue/+VKKAaDd/Utqxh6uuKl1RI=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3PhNVQe6BqdwKJL/ZfXYmlwpM4HzGcweVbOOXreKGHc=
+			wW3UE3aNv4pHoukgl9bSxHqFrL7rx6ocgOlOCVqWkag=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -386,14 +386,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e1HhR1uXvROytNzw7XXJaa9ouDjAIaWhR3Zaf/pn9MQ=
+			R7hm6goVfSp9dqnTRAPRPjFt3B/Q7wv7LascBBKw3og=
 			</data>
 		</dict>
 		<key>PitchViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w0X0Wxq6Bra5nPxveub/efJCBQgkLSAbQ21Z/r5yolg=
+			xuaEdT8k4+GUNGhi9YNEGJHRKzHd4LcszT1e9nymDgU=
 			</data>
 		</dict>
 		<key>README.md</key>
@@ -407,49 +407,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lO+7WZ/gcyeAs/Zx4iVA4wN79UQTNCgJG6mt9IzH3bg=
+			jW+/O0dzcqZfSkz0YLRCGl/AmlXZVlFe/uVsPUjKCSs=
 			</data>
 		</dict>
 		<key>StandingsViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LddENvf+1ia6SPnQfkSPHg+RnJirEaorZEOgZx8pjE4=
+			Q1z8ehMyS4vBUiTdLPvjtow8xwESALJ2zGPGOC1zrPw=
 			</data>
 		</dict>
 		<key>StatisticsView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JpG2dJ7iYZGwkGhRgyykgJTQG+FN1jwBCfxJtfqUwgo=
+			jRSzauI4vJOkvdnopUoY6cFF8G8kX48HQkEKiGi6Lfs=
 			</data>
 		</dict>
 		<key>StatsViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iQN8egmrtD9pmRY/f7sgzZNcFFfImZYoXJdkho1gOBI=
+			pA00N8fSxCBJ6i5SSlzuUVf97sRfbHIKdoOHShEXsAc=
 			</data>
 		</dict>
 		<key>SummaryViewComponent.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fCLxfp2upWQlEVk1hm0WtYXJfeDW3RHokOdVigSc1DY=
+			DOfx/DiHLXOx86E3JsA3HLazFLZAvnN26/s37foAVwc=
 			</data>
 		</dict>
 		<key>TabCollectionCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T0i6ihnXNiTne+TGuTBCutka8doDaiAkj48AibhGI64=
+			k96FCsUm5LcZj3nr/qJcGyDoW2t02QeHimmer+8AweA=
 			</data>
 		</dict>
 		<key>TabCollectionCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DN2byfIgkLVkFmUenfG6zkzviViYIAyU1PgXDwe8dtA=
+			pGqrLffSouNGV1kIJxX04clpGl/qF8tMVghFDUiQaBM=
 			</data>
 		</dict>
 		<key>TabPageViewController.storyboardc/Info.plist</key>
@@ -463,14 +463,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U0zIxbKZfeRBYFUdiUw579nJd3oenLBBlyIFGUf/+Ig=
+			BefZH4Y/SMToMWeW+a299Q8xqRDcbMeq1RhZdlywigI=
 			</data>
 		</dict>
 		<key>TabView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gQjZ+ZuBpcIXfoijsZ/ltStZVOchkr2JvAExKW45p4w=
+			B2BSbKbMmI1qZbPfU10GonRbpN7IFo87Lu4sthl+aMU=
 			</data>
 		</dict>
 	</dict>
