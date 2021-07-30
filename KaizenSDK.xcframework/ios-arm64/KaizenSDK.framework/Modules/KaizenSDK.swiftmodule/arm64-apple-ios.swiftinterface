@@ -149,9 +149,11 @@ public struct KZStyleMatchDetailModel : KaizenSDK.KZSharedProtocolModel {
   public let lang: KaizenSDK.LanguageKey
   public let identifier: Swift.String
   public let progressIndicatorColor: [UIKit.UIColor]
+  public let accessToken: Swift.String?
+  public let refreshToken: Swift.String?
   public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english, highlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Bold",
                                                 size: 12.0), unHighlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Regular",
-                                                  size: 12.0), progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor)
+                                                  size: 12.0), progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor, accessToken: Swift.String? = nil, refreshToken: Swift.String? = nil)
 }
 public protocol MatchDetailRoutingLogic : AnyObject {
   func start()
@@ -239,13 +241,17 @@ public protocol KZSharedProtocolModel {
   var identifier: Swift.String { get }
   var lang: KaizenSDK.LanguageKey { get }
   var progressIndicatorColor: [UIKit.UIColor] { get }
+  var accessToken: Swift.String? { get }
+  var refreshToken: Swift.String? { get }
 }
 public let kzSDKDefaultProgressIndicatorColor: [UIKit.UIColor]
 public struct KZViewModel : KaizenSDK.KZSharedProtocolModel {
   public let identifier: Swift.String
   public let lang: KaizenSDK.LanguageKey
   public let progressIndicatorColor: [UIKit.UIColor]
-  public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english, progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor)
+  public let accessToken: Swift.String?
+  public let refreshToken: Swift.String?
+  public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english, progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor, accessToken: Swift.String? = nil, refreshToken: Swift.String? = nil)
 }
 public enum LanguageKey : Swift.String {
   case english
@@ -254,6 +260,7 @@ public enum LanguageKey : Swift.String {
   case portuguese
   case brazilian
   case bulgarian
+  case romanian
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
