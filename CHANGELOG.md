@@ -46,3 +46,9 @@
 - When the drawer is open  the user can't do any action on the empty space of the drawer until dismiss the drawer.
 - Update SDK language parameters.
 
+## Version 1.0.2
+- Improvements.
+- When the drawer is open  the user can't do any action on the navigation bar space of the drawer until dismiss the drawer.
+- New component Statistics Carousel Component.
+- Improve aspect ratio and rezising for autolayout
+

@@ -1,8 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
-import Alamofire
-import FloatingPanel
 import Foundation
 @_exported import KaizenSDK
 import Swift
@@ -101,6 +99,7 @@ public protocol KZStateComponentDelegate : AnyObject {
   open var xibName: Swift.String? {
     get
   }
+  public var size: (height: CoreGraphics.CGFloat?, width: CoreGraphics.CGFloat?)?
   weak public var delegate: KaizenSDK.KZStateComponentDelegate?
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -122,6 +121,26 @@ public protocol KZStateComponentDelegate : AnyObject {
   @objc deinit
 }
 public struct MatchUseCaseBuilder {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatisticsCarouselComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
+  }
+  override public func initializeView()
+  public func configure(with kzModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension StatisticsCarouselComponent : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
 public struct LineUpsUseCaseBuilder {
 }

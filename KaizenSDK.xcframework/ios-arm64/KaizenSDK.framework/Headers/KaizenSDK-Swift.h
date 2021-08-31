@@ -286,6 +286,32 @@ SWIFT_CLASS("_TtC9KaizenSDK22StandingsViewComponent")
 
 
 
+SWIFT_CLASS("_TtC9KaizenSDK27StatisticsCarouselComponent")
+@interface StatisticsCarouselComponent : BaseComponent
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@class UICollectionView;
+@class NSNumber;
+@class NSIndexPath;
+@class UICollectionViewCell;
+@class UICollectionViewLayout;
+@class UIScrollView;
+
+@interface StatisticsCarouselComponent (SWIFT_EXTENSION(KaizenSDK)) <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView willDisplayCell:(UICollectionViewCell * _Nonnull)cell forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+@end
+
+
 SWIFT_CLASS("_TtC9KaizenSDK18StatsViewComponent")
 @interface StatsViewComponent : BaseComponent
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -301,7 +327,6 @@ SWIFT_CLASS("_TtC9KaizenSDK20SummaryViewComponent")
 @end
 
 
-@class NSNumber;
 
 SWIFT_CLASS("_TtC9KaizenSDK21TabPageViewController")
 @interface TabPageViewController : UIPageViewController
@@ -314,18 +339,17 @@ SWIFT_CLASS("_TtC9KaizenSDK21TabPageViewController")
 @end
 
 
-@class UIScrollView;
-
-@interface TabPageViewController (SWIFT_EXTENSION(KaizenSDK)) <UIScrollViewDelegate>
-- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
-- (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
-@end
-
 @class UIViewController;
 
 @interface TabPageViewController (SWIFT_EXTENSION(KaizenSDK)) <UIPageViewControllerDelegate>
 - (void)pageViewController:(UIPageViewController * _Nonnull)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> * _Nonnull)pendingViewControllers;
 - (void)pageViewController:(UIPageViewController * _Nonnull)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> * _Nonnull)previousViewControllers transitionCompleted:(BOOL)completed;
+@end
+
+
+@interface TabPageViewController (SWIFT_EXTENSION(KaizenSDK)) <UIScrollViewDelegate>
+- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
+- (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
 @end
 
 
