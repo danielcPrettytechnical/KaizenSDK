@@ -212,6 +212,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class NSCoder;
+
+SWIFT_CLASS("_TtC9KaizenSDK23AdvancedPageControlView")
+@interface AdvancedPageControlView : UIView
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (void)drawRect:(CGRect)rect;
+@end
+
 @class WKUserContentController;
 @class WKScriptMessage;
 @class WKWebView;
@@ -584,6 +595,17 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class NSCoder;
+
+SWIFT_CLASS("_TtC9KaizenSDK23AdvancedPageControlView")
+@interface AdvancedPageControlView : UIView
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (void)drawRect:(CGRect)rect;
+@end
+
 @class WKUserContentController;
 @class WKScriptMessage;
 @class WKWebView;

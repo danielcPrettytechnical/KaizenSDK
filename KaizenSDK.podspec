@@ -18,5 +18,4 @@ Pod::Spec.new do |s|
   s.swift_version = "5" 
   s.dependency 'Alamofire'
   s.dependency 'FloatingPanel'
-  s.dependency 'AdvancedPageControl'
 end

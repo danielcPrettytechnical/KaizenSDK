@@ -45,6 +45,11 @@ public enum UseCaseError : Swift.Error {
     get
   }
 }
+@_inheritsConvenienceInitializers public class ScaleDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MatchViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
@@ -58,6 +63,11 @@ public enum UseCaseError : Swift.Error {
 public struct PitchComponentUseCaseBuilder {
 }
 public struct H2HUseCaseBuilder {
+}
+@_inheritsConvenienceInitializers public class WormDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
 }
 public struct DetailedStatsUseCaseBuilder {
 }
@@ -182,6 +192,11 @@ public protocol MatchDetailRoutingLogic : AnyObject {
 public struct MatchDetailViewBuilder {
   public static func inject(with navigationController: UIKit.UINavigationController?, matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel) -> KaizenSDK.MatchDetailRoutingLogic
 }
+@_inheritsConvenienceInitializers public class ScrollingDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
+}
 public protocol CustomState {
   var image: UIKit.UIImage? { get }
   var title: Swift.String? { get }
@@ -191,6 +206,21 @@ public protocol CustomState {
 public struct SummaryUseCaseBuilder {
 }
 public struct StatsUseCaseBuilder {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AdvancedPageControlView : UIKit.UIView {
+  public var numberOfPages: Swift.Int {
+    get
+    set(val)
+  }
+  public var drawer: KaizenSDK.AdvancedPageControlDraw
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  public func setPageOffset(_ offset: CoreGraphics.CGFloat)
+  public func setPage(_ index: Swift.Int)
+  @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
+  }
+  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
@@ -222,6 +252,16 @@ public struct StatsUseCaseBuilder {
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
+@_inheritsConvenienceInitializers public class ThinWormHeadsDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class JumpDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
+}
 public struct MomentumUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers open class TabPageViewController : UIKit.UIPageViewController {
@@ -245,6 +285,30 @@ extension TabPageViewController {
 extension TabPageViewController {
   public func updateNavigationBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool)
   public func showNavigationBar()
+}
+@_inheritsConvenienceInitializers public class SlideDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
+}
+public protocol AdvancedPageControlDraw {
+  var currentItem: CoreGraphics.CGFloat { get set }
+  var size: CoreGraphics.CGFloat { get set }
+  var numberOfPages: Swift.Int { get set }
+  func draw(_ rect: CoreGraphics.CGRect)
+}
+public class AdvancedPageControlDrawerParentWithIndicator : KaizenSDK.AdvancedPageControlDrawerParent {
+  public init(numberOfPages: Swift.Int? = 5, height: CoreGraphics.CGFloat? = 16, width: CoreGraphics.CGFloat? = 16, space: CoreGraphics.CGFloat? = 16, raduis: CoreGraphics.CGFloat? = 8, currentItem: CoreGraphics.CGFloat? = 0, indicatorColor: UIKit.UIColor? = .white, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreGraphics.CGFloat = 1, indicatorBorderColor: UIKit.UIColor = .white, indicatorBorderWidth: CoreGraphics.CGFloat = 2)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
+}
+public class AdvancedPageControlDrawerParent {
+  public var numberOfPages: Swift.Int
+  public var size: CoreGraphics.CGFloat
+  public var currentItem: CoreGraphics.CGFloat
+  public var items: [Swift.Int]
+  public init(numberOfPages: Swift.Int? = 5, height: CoreGraphics.CGFloat? = 16, width: CoreGraphics.CGFloat? = 16, space: CoreGraphics.CGFloat? = 16, raduis: CoreGraphics.CGFloat? = 16, currentItem: CoreGraphics.CGFloat? = 0, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreGraphics.CGFloat = 1)
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StandingsViewComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
@@ -285,6 +349,16 @@ public enum LanguageKey : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+@_inheritsConvenienceInitializers public class SwapDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ThinWormDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
+  @objc deinit
 }
 extension KaizenSDK.UseCaseError : Swift.Equatable {}
 extension KaizenSDK.UseCaseError : Swift.Hashable {}
