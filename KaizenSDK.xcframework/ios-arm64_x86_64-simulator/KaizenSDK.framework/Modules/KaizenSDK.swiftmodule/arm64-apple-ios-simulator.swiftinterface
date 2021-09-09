@@ -7,10 +7,6 @@ import Swift
 import UIKit
 import WebKit
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DetailedStatsViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -51,10 +47,6 @@ public enum UseCaseError : Swift.Error {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MatchViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -72,10 +64,6 @@ public struct H2HUseCaseBuilder {
 public struct DetailedStatsUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class H2HViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -105,15 +93,20 @@ public enum KZStateComponentViewState {
 public protocol KZStateComponentDelegate : AnyObject {
   func changeViewState(_ state: KaizenSDK.KZStateComponentViewState, component: Swift.String)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseComponent : UIKit.UIView, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
   open var xibName: Swift.String? {
     get
   }
   public var size: (height: CoreGraphics.CGFloat?, width: CoreGraphics.CGFloat?)?
   weak public var delegate: KaizenSDK.KZStateComponentDelegate?
+  public var webView: WebKit.WKWebView {
+    get
+    set
+  }
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   open func initializeView()
+  @objc override dynamic public func removeFromSuperview()
   @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
   @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
@@ -121,10 +114,6 @@ public protocol KZStateComponentDelegate : AnyObject {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class LineUpsViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -136,6 +125,7 @@ public struct MatchUseCaseBuilder {
   override public var xibName: Swift.String? {
     get
   }
+  @objc override dynamic public func removeFromSuperview()
   override public func initializeView()
   public func configure(with kzModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
@@ -223,34 +213,26 @@ public struct StatsUseCaseBuilder {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatsViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MomentumViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PitchViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
+}
+public typealias ConstraintInsets = (left: CoreGraphics.CGFloat?, top: CoreGraphics.CGFloat?, right: CoreGraphics.CGFloat?, bottom: CoreGraphics.CGFloat?)
+extension UIView {
+  public func addChildView(childView: UIKit.UIView, withConstraints insets: KaizenSDK.ConstraintInsets)
 }
 @_inheritsConvenienceInitializers public class ThinWormHeadsDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
   public func draw(_ rect: CoreGraphics.CGRect)
@@ -311,10 +293,6 @@ public class AdvancedPageControlDrawerParent {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StandingsViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
