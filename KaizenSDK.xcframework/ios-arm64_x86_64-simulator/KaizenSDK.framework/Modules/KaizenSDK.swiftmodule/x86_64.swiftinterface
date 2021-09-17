@@ -145,10 +145,6 @@ extension StatisticsCarouselComponent : UIKit.UICollectionViewDataSource, UIKit.
 public struct LineUpsUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SummaryViewComponent : KaizenSDK.BaseComponent {
-  override public var xibName: Swift.String? {
-    get
-  }
-  override public func initializeView()
   public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -188,6 +184,7 @@ public struct MatchDetailViewBuilder {
   @objc deinit
 }
 public protocol CustomState {
+  var lang: KaizenSDK.LanguageKey { get }
   var image: UIKit.UIImage? { get }
   var title: Swift.String? { get }
   var description: Swift.String? { get }

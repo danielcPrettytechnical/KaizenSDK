@@ -53,3 +53,8 @@
 - Improve aspect ratio and rezising for autolayout
 - Improve loader issue in Statistics Carousel Component.
 
+## Version 1.0.3
+- Improvements.
+- SDK feedback empty state changes
+- Optimise components loading.
+
