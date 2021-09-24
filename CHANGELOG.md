@@ -58,3 +58,7 @@
 - SDK feedback empty state changes
 - Optimise components loading.
 
+## Version 1.0.4
+- Improvements
+- Add a data source for custom components in StatisticsCarouselComponent.
+

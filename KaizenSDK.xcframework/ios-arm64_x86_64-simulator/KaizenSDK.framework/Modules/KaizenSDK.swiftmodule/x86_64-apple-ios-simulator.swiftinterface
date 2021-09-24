@@ -7,7 +7,7 @@ import Swift
 import UIKit
 import WebKit
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DetailedStatsViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -47,7 +47,7 @@ public enum UseCaseError : Swift.Error {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MatchViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -64,7 +64,7 @@ public struct H2HUseCaseBuilder {
 public struct DetailedStatsUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class H2HViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -106,6 +106,7 @@ public protocol KZStateComponentDelegate : AnyObject {
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   open func initializeView()
+  open func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public func removeFromSuperview()
   @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
   @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
@@ -114,20 +115,24 @@ public protocol KZStateComponentDelegate : AnyObject {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class LineUpsViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public struct MatchUseCaseBuilder {
 }
+public protocol StatisticsCarouselDataSource : AnyObject {
+  func numberOfPagesInStatisticsCarousel() -> [KaizenSDK.StatisticsCarouselPage]
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatisticsCarouselComponent : KaizenSDK.BaseComponent {
   override public var xibName: Swift.String? {
     get
   }
-  @objc override dynamic public func removeFromSuperview()
   override public func initializeView()
-  public func configure(with kzModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public func removeFromSuperview()
+  weak public var dataSource: KaizenSDK.StatisticsCarouselDataSource?
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -142,10 +147,13 @@ extension StatisticsCarouselComponent : UIKit.UICollectionViewDataSource, UIKit.
   @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
   @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
+extension StatisticsCarouselComponent : KaizenSDK.KZStateComponentDelegate {
+  public func changeViewState(_ state: KaizenSDK.KZStateComponentViewState, component: Swift.String)
+}
 public struct LineUpsUseCaseBuilder {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SummaryViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -183,6 +191,20 @@ public struct MatchDetailViewBuilder {
   override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
+public enum StatisticsCarouselPage : Swift.CaseIterable {
+  case momentum
+  case pitch
+  case stats
+  public static func == (a: KaizenSDK.StatisticsCarouselPage, b: KaizenSDK.StatisticsCarouselPage) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [KaizenSDK.StatisticsCarouselPage]
+  public static var allCases: [KaizenSDK.StatisticsCarouselPage] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol CustomState {
   var lang: KaizenSDK.LanguageKey { get }
   var image: UIKit.UIImage? { get }
@@ -210,19 +232,19 @@ public struct StatsUseCaseBuilder {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatsViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MomentumViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PitchViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -290,7 +312,7 @@ public class AdvancedPageControlDrawerParent {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StandingsViewComponent : KaizenSDK.BaseComponent {
-  public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
+  override public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
@@ -337,6 +359,8 @@ public enum LanguageKey : Swift.String {
 }
 extension KaizenSDK.UseCaseError : Swift.Equatable {}
 extension KaizenSDK.UseCaseError : Swift.Hashable {}
+extension KaizenSDK.StatisticsCarouselPage : Swift.Equatable {}
+extension KaizenSDK.StatisticsCarouselPage : Swift.Hashable {}
 extension KaizenSDK.LanguageKey : Swift.Equatable {}
 extension KaizenSDK.LanguageKey : Swift.Hashable {}
 extension KaizenSDK.LanguageKey : Swift.RawRepresentable {}

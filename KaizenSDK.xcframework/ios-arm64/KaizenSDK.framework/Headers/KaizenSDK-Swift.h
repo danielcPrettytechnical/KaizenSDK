@@ -306,6 +306,8 @@ SWIFT_CLASS("_TtC9KaizenSDK27StatisticsCarouselComponent")
 @end
 
 
+
+
 @class UICollectionView;
 @class NSNumber;
 @class NSIndexPath;

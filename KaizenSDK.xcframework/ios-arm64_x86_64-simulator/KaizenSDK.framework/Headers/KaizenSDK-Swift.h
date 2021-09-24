@@ -308,6 +308,8 @@ SWIFT_CLASS("_TtC9KaizenSDK27StatisticsCarouselComponent")
 @end
 
 
+
+
 @class UICollectionView;
 @class NSNumber;
 @class NSIndexPath;
@@ -692,6 +694,8 @@ SWIFT_CLASS("_TtC9KaizenSDK27StatisticsCarouselComponent")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 @class UICollectionView;
