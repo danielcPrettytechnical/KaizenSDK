@@ -61,4 +61,7 @@
 ## Version 1.0.4
 - Improvements
 - Add a data source for custom components in StatisticsCarouselComponent.
+- Optimise Loader circle iOS.
+- Optimise loading time when loading a component on the SDK
+- fix scrolling.
 
