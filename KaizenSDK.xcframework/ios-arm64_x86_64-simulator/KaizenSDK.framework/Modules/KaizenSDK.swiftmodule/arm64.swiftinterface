@@ -1,16 +1,15 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
 import Foundation
 @_exported import KaizenSDK
 import Swift
 import UIKit
 import WebKit
-import _Concurrency
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DetailedStatsViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class DetailedStatsViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public struct StandingsUseCaseBuilder {
@@ -18,20 +17,20 @@ public struct StandingsUseCaseBuilder {
 @_hasMissingDesignatedInitializers public class BaseUseCase {
   @objc deinit
 }
-extension KaizenSDK.TabPageViewController : UIKit.UIPageViewControllerDataSource {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+extension TabPageViewController : UIKit.UIPageViewControllerDataSource {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
 }
-extension KaizenSDK.TabPageViewController : UIKit.UIPageViewControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+extension TabPageViewController : UIKit.UIPageViewControllerDelegate {
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
+  @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
 }
-extension KaizenSDK.TabPageViewController : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+extension TabPageViewController : UIKit.UIScrollViewDelegate {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
 }
-extension WebKit.WKWebView {
-  @_Concurrency.MainActor(unsafe) public func warmUp()
+extension WKWebView {
+  public func warmUp()
 }
 public struct StatisticsUseCaseBuilder {
 }
@@ -50,10 +49,10 @@ public enum UseCaseError : Swift.Error {
   override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MatchViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MatchViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public struct PitchComponentUseCaseBuilder {
@@ -67,10 +66,10 @@ public struct H2HUseCaseBuilder {
 }
 public struct DetailedStatsUseCaseBuilder {
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class H2HViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class H2HViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public struct MatchDetailUseCaseBuilder {
@@ -81,7 +80,7 @@ public protocol PresentationTransformable {
   associatedtype PresentationModel
   func toPresentation() throws -> Self.PresentationModel
 }
-extension Swift.Encodable {
+extension Encodable {
   public func jsonData() throws -> Foundation.Data
   public func jsonString(encoding: Swift.String.Encoding = .utf8) throws -> Swift.String?
   public func jsonDictonary() throws -> [Swift.String : Any]?
@@ -97,31 +96,31 @@ public enum KZStateComponentViewState {
 public protocol KZStateComponentDelegate : AnyObject {
   func changeViewState(_ state: KaizenSDK.KZStateComponentViewState, component: Swift.String)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class BaseComponent : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) open var xibName: Swift.String? {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseComponent : UIKit.UIView {
+  open var xibName: Swift.String? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var size: (height: CoreGraphics.CGFloat?, width: CoreGraphics.CGFloat?)?
-  @_Concurrency.MainActor(unsafe) weak public var delegate: KaizenSDK.KZStateComponentDelegate?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func removeFromSuperview()
-  @_Concurrency.MainActor(unsafe) open func initializeView()
-  @_Concurrency.MainActor(unsafe) open func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
+  public var size: (height: CoreGraphics.CGFloat?, width: CoreGraphics.CGFloat?)?
+  weak public var delegate: KaizenSDK.KZStateComponentDelegate?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public func removeFromSuperview()
+  open func initializeView()
+  open func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
   @objc deinit
 }
-extension KaizenSDK.BaseComponent : WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webViewWebContentProcessDidTerminate(_ webView: WebKit.WKWebView)
+extension BaseComponent : WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
+  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc dynamic public func webViewWebContentProcessDidTerminate(_ webView: WebKit.WKWebView)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LineUpsViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class LineUpsViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public struct MatchUseCaseBuilder {
@@ -129,37 +128,37 @@ public struct MatchUseCaseBuilder {
 public protocol StatisticsCarouselDataSource : AnyObject {
   func numberOfPagesInStatisticsCarousel() -> [KaizenSDK.StatisticsCarouselPage]
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StatisticsCarouselComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public var xibName: Swift.String? {
-    @_Concurrency.MainActor(unsafe) get
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatisticsCarouselComponent : KaizenSDK.BaseComponent {
+  override public var xibName: Swift.String? {
+    get
   }
-  @_Concurrency.MainActor(unsafe) override public func initializeView()
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func removeFromSuperview()
-  @_Concurrency.MainActor(unsafe) weak public var dataSource: KaizenSDK.StatisticsCarouselDataSource?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  override public func initializeView()
+  override public func configure(with kzModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public func removeFromSuperview()
+  weak public var dataSource: KaizenSDK.StatisticsCarouselDataSource?
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
-extension KaizenSDK.StatisticsCarouselComponent : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDelegateFlowLayout {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+extension StatisticsCarouselComponent : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
-extension KaizenSDK.StatisticsCarouselComponent : KaizenSDK.KZStateComponentDelegate {
-  @_Concurrency.MainActor(unsafe) public func changeViewState(_ state: KaizenSDK.KZStateComponentViewState, component: Swift.String)
+extension StatisticsCarouselComponent : KaizenSDK.KZStateComponentDelegate {
+  public func changeViewState(_ state: KaizenSDK.KZStateComponentViewState, component: Swift.String)
 }
 public struct LineUpsUseCaseBuilder {
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SummaryViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SummaryViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 final public class Observable<Value> {
@@ -220,19 +219,19 @@ public struct SummaryUseCaseBuilder {
 }
 public struct StatsUseCaseBuilder {
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AdvancedPageControlView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var numberOfPages: Swift.Int {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AdvancedPageControlView : UIKit.UIView {
+  public var numberOfPages: Swift.Int {
     get
     set(val)
   }
-  @_Concurrency.MainActor(unsafe) public var drawer: KaizenSDK.AdvancedPageControlDraw
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) public func setPageOffset(_ offset: CoreGraphics.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func setPage(_ index: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
-    @_Concurrency.MainActor(unsafe) @objc get
+  public var drawer: KaizenSDK.AdvancedPageControlDraw
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  public func setPageOffset(_ offset: CoreGraphics.CGFloat)
+  public func setPage(_ index: Swift.Int)
+  @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
   @objc deinit
 }
 public enum NVActivityIndicatorType : Swift.CaseIterable {
@@ -282,64 +281,65 @@ public enum NVActivityIndicatorType : Swift.CaseIterable {
 }
 public typealias FadeInAnimation = (UIKit.UIView) -> Swift.Void
 public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -> Swift.Void
-@objc @_Concurrency.MainActor(unsafe) final public class NVActivityIndicatorView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: KaizenSDK.NVActivityIndicatorType
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreGraphics.CGFloat
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_IN_ANIMATION: (_ view: UIKit.UIView) -> Swift.Void
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_OUT_ANIMATION: (_ view: UIKit.UIView, _ complete: @escaping () -> Swift.Void) -> Swift.Void
-  @_Concurrency.MainActor(unsafe) final public var type: KaizenSDK.NVActivityIndicatorType
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreGraphics.CGFloat
+@objc final public class NVActivityIndicatorView : UIKit.UIView {
+  public static var DEFAULT_TYPE: KaizenSDK.NVActivityIndicatorType
+  public static var DEFAULT_COLOR: UIKit.UIColor
+  public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
+  public static var DEFAULT_PADDING: CoreGraphics.CGFloat
+  public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
+  public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
+  public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
+  public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
+  public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
+  public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
+  public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
+  public static var DEFAULT_FADE_IN_ANIMATION: (UIKit.UIView) -> Swift.Void
+  public static var DEFAULT_FADE_OUT_ANIMATION: (UIKit.UIView, @escaping () -> Swift.Void) -> Swift.Void
+  final public var type: KaizenSDK.NVActivityIndicatorType
+  @objc @IBInspectable final public var color: UIKit.UIColor
+  @objc @IBInspectable final public var padding: CoreGraphics.CGFloat
   @available(*, deprecated)
-  @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
+  final public var animating: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) final public var isAnimating: Swift.Bool {
+  final public var isAnimating: Swift.Bool {
     get
   }
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, type: KaizenSDK.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
-  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
-    @_Concurrency.MainActor(unsafe) @objc get
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  public init(frame: CoreGraphics.CGRect, type: KaizenSDK.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
+  @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
+    @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreGraphics.CGRect {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+  @objc override final public var bounds: CoreGraphics.CGRect {
+    @objc get
+    @objc set
   }
-  @_Concurrency.MainActor(unsafe) final public func startAnimating()
-  @_Concurrency.MainActor(unsafe) final public func stopAnimating()
+  final public func startAnimating()
+  final public func stopAnimating()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StatsViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StatsViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MomentumViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class MomentumViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PitchViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PitchViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public typealias ConstraintInsets = (left: CoreGraphics.CGFloat?, top: CoreGraphics.CGFloat?, right: CoreGraphics.CGFloat?, bottom: CoreGraphics.CGFloat?)
-extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func addChildView(childView: UIKit.UIView, withConstraints insets: KaizenSDK.ConstraintInsets)
+extension UIView {
+  public func addChildView(childView: UIKit.UIView, withConstraints insets: KaizenSDK.ConstraintInsets)
 }
 @_inheritsConvenienceInitializers public class ThinWormHeadsDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
   public func draw(_ rect: CoreGraphics.CGRect)
@@ -353,27 +353,27 @@ extension UIKit.UIView {
 }
 public struct MomentumUseCaseBuilder {
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class TabPageViewController : UIKit.UIPageViewController {
-  @_Concurrency.MainActor(unsafe) open var isInfinity: Swift.Bool
-  @_Concurrency.MainActor(unsafe) open var tabItems: [(viewController: UIKit.UIViewController, title: Swift.String)] {
+@objc @_inheritsConvenienceInitializers open class TabPageViewController : UIKit.UIPageViewController {
+  open var isInfinity: Swift.Bool
+  open var tabItems: [(viewController: UIKit.UIViewController, title: Swift.String)] {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public static func create() -> KaizenSDK.TabPageViewController?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  public static func create() -> KaizenSDK.TabPageViewController?
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-extension KaizenSDK.TabPageViewController {
-  @_Concurrency.MainActor(unsafe) public func displayControllerWithIndex(_ index: Swift.Int, direction: UIKit.UIPageViewController.NavigationDirection, animated: Swift.Bool)
+extension TabPageViewController {
+  public func displayControllerWithIndex(_ index: Swift.Int, direction: UIKit.UIPageViewController.NavigationDirection, animated: Swift.Bool)
 }
-extension KaizenSDK.TabPageViewController {
-  @_Concurrency.MainActor(unsafe) public func updateNavigationBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func showNavigationBar()
+extension TabPageViewController {
+  public func updateNavigationBarHidden(_ hidden: Swift.Bool, animated: Swift.Bool)
+  public func showNavigationBar()
 }
 @_inheritsConvenienceInitializers public class SlideDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
   public func draw(_ rect: CoreGraphics.CGRect)
@@ -388,6 +388,7 @@ public protocol AdvancedPageControlDraw {
 }
 public class AdvancedPageControlDrawerParentWithIndicator : KaizenSDK.AdvancedPageControlDrawerParent {
   public init(numberOfPages: Swift.Int? = 5, height: CoreGraphics.CGFloat? = 16, width: CoreGraphics.CGFloat? = 16, space: CoreGraphics.CGFloat? = 16, raduis: CoreGraphics.CGFloat? = 8, currentItem: CoreGraphics.CGFloat? = 0, indicatorColor: UIKit.UIColor? = .white, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreGraphics.CGFloat = 1, indicatorBorderColor: UIKit.UIColor = .white, indicatorBorderWidth: CoreGraphics.CGFloat = 2)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 public class AdvancedPageControlDrawerParent {
@@ -398,10 +399,10 @@ public class AdvancedPageControlDrawerParent {
   public init(numberOfPages: Swift.Int? = 5, height: CoreGraphics.CGFloat? = 16, width: CoreGraphics.CGFloat? = 16, space: CoreGraphics.CGFloat? = 16, raduis: CoreGraphics.CGFloat? = 16, currentItem: CoreGraphics.CGFloat? = 0, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreGraphics.CGFloat = 1)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StandingsViewComponent : KaizenSDK.BaseComponent {
-  @_Concurrency.MainActor(unsafe) override public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class StandingsViewComponent : KaizenSDK.BaseComponent {
+  override public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public protocol KZSharedProtocolModel {
