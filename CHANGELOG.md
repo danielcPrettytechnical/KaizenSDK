@@ -65,3 +65,7 @@
 - Optimise loading time when loading a component on the SDK
 - fix scrolling.
 
+## Version 1.0.5
+- Improvements
+- Fix visualisation frame view
+

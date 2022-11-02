@@ -2,6 +2,7 @@ disabled_rules: # rule identifiers to exclude from running
   - colon
   - comma
   - control_statement
+  - todo
 opt_in_rules: # some rules are only opt-in
   - empty_count
   # Find all the available rules by running:
@@ -11,6 +12,7 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - .build
   - Pods
   - KaizenSDK/Presentation/Fundaments/AdvancedPageControl
+  - KaizenSDK/Presentation/Components/NVActivityIndicatorView
   - Source/ExcludedFolder
   - Source/ExcludedFile.swift
   - Source/*/ExcludedFile.swift # Exclude files with a wildcard

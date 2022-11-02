@@ -6,6 +6,6 @@ framework module KaizenSDK {
 }
 
 module KaizenSDK.Swift {
-    header "KaizenSDK-Swift.h"
-    requires objc
+  header "KaizenSDK-Swift.h"
+  requires objc
 }
