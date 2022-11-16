@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source_files = ['KaizenSDK/**/*.{h,m,swift,xib,storyboard, xcassets}']
   s.dependency 'Alamofire'
   s.dependency 'FloatingPanel'
-  s.swift_version = "5.7"
+  s.swift_version = "5.5.2"
   s.exclude_files = [ './Pods', './Podfile', './Podfile.lock', 'KaizenSDK/**/*.plist' ]
   s.resources = ['KaizenSDK/icons.xcassets']
 end

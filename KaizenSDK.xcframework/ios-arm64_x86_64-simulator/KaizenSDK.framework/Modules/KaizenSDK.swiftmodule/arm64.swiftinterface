@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KaizenSDK
 import Alamofire
 import FloatingPanel
 import Foundation
@@ -10,10 +9,9 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
-import _StringProcessing
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DetailedStatsViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzDetailedStatsModel: KaizenSDK.KZSharedProtocolModel)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -48,14 +46,14 @@ public enum UseCaseError : Swift.Error {
   }
 }
 @_inheritsConvenienceInitializers public class ScaleDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MatchViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzMatchModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -64,8 +62,8 @@ public struct PitchComponentUseCaseBuilder {
 public struct H2HUseCaseBuilder {
 }
 @_inheritsConvenienceInitializers public class WormDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 public struct DetailedStatsUseCaseBuilder {
@@ -73,7 +71,7 @@ public struct DetailedStatsUseCaseBuilder {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class H2HViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzH2HModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -104,9 +102,9 @@ public protocol KZStateComponentDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) open var xibName: Swift.String? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public var size: (height: CoreFoundation.CGFloat?, width: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public var size: (height: CoreGraphics.CGFloat?, width: CoreGraphics.CGFloat)
   @_Concurrency.MainActor(unsafe) weak public var delegate: KaizenSDK.KZStateComponentDelegate?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutIfNeeded()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func removeFromSuperview()
@@ -125,7 +123,7 @@ extension KaizenSDK.BaseComponent : WebKit.WKNavigationDelegate, WebKit.WKScript
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LineUpsViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzLineUpModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -134,13 +132,13 @@ public protocol StatisticsCarouselDataSource : AnyObject {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StatisticsCarouselComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public var xibName: Swift.String? {
-    get
+    @_Concurrency.MainActor(unsafe) get
   }
   @_Concurrency.MainActor(unsafe) override public func initializeView()
   @_Concurrency.MainActor(unsafe) override public func configure(with kzModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func removeFromSuperview()
   @_Concurrency.MainActor(unsafe) weak public var dataSource: KaizenSDK.StatisticsCarouselDataSource?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -148,9 +146,9 @@ extension KaizenSDK.StatisticsCarouselComponent : UIKit.UICollectionViewDataSour
   @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
   @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
   @_Concurrency.MainActor(unsafe) @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
 }
@@ -162,7 +160,7 @@ public struct LineUpsUseCaseBuilder {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SummaryViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzSummaryModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -195,8 +193,8 @@ public struct MatchDetailViewBuilder {
   public static func inject(with navigationController: UIKit.UINavigationController?, matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel) -> KaizenSDK.MatchDetailRoutingLogic
 }
 @_inheritsConvenienceInitializers public class ScrollingDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 public enum StatisticsCarouselPage : Swift.CaseIterable {
@@ -230,33 +228,33 @@ public struct StatsUseCaseBuilder {
     set(val)
   }
   @_Concurrency.MainActor(unsafe) public var drawer: KaizenSDK.AdvancedPageControlDraw
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) public func setPageOffset(_ offset: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) public func setPageOffset(_ offset: CoreGraphics.CGFloat)
   @_Concurrency.MainActor(unsafe) public func setPage(_ index: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StatsViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzStatsModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MomentumViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzMomentumModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PitchViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzPitchModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -311,19 +309,19 @@ public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: KaizenSDK.NVActivityIndicatorType
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
-  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_IN_ANIMATION: (_ view: UIKit.UIView) -> Swift.Void
   @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_OUT_ANIMATION: (_ view: UIKit.UIView, _ complete: @escaping () -> Swift.Void) -> Swift.Void
   @_Concurrency.MainActor(unsafe) final public var type: KaizenSDK.NVActivityIndicatorType
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreGraphics.CGFloat
   @available(*, deprecated)
   @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
     get
@@ -332,30 +330,30 @@ public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -
     get
   }
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, type: KaizenSDK.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreFoundation.CGFloat? = nil)
-  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, type: KaizenSDK.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreFoundation.CGRect {
-    @objc get
-    @objc set
+  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
   }
   @_Concurrency.MainActor(unsafe) final public func startAnimating()
   @_Concurrency.MainActor(unsafe) final public func stopAnimating()
   @objc deinit
 }
-public typealias ConstraintInsets = (left: CoreFoundation.CGFloat?, top: CoreFoundation.CGFloat?, right: CoreFoundation.CGFloat?, bottom: CoreFoundation.CGFloat?)
+public typealias ConstraintInsets = (left: CoreGraphics.CGFloat?, top: CoreGraphics.CGFloat?, right: CoreGraphics.CGFloat?, bottom: CoreGraphics.CGFloat?)
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public func addChildView(childView: UIKit.UIView, withConstraints insets: KaizenSDK.ConstraintInsets)
 }
 @_inheritsConvenienceInitializers public class ThinWormHeadsDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 @_inheritsConvenienceInitializers public class JumpDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 public struct MomentumUseCaseBuilder {
@@ -383,32 +381,32 @@ extension KaizenSDK.TabPageViewController {
   @_Concurrency.MainActor(unsafe) public func showNavigationBar()
 }
 @_inheritsConvenienceInitializers public class SlideDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 public protocol AdvancedPageControlDraw {
-  var currentItem: CoreFoundation.CGFloat { get set }
-  var size: CoreFoundation.CGFloat { get set }
+  var currentItem: CoreGraphics.CGFloat { get set }
+  var size: CoreGraphics.CGFloat { get set }
   var numberOfPages: Swift.Int { get set }
-  func draw(_ rect: CoreFoundation.CGRect)
+  func draw(_ rect: CoreGraphics.CGRect)
 }
 public class AdvancedPageControlDrawerParentWithIndicator : KaizenSDK.AdvancedPageControlDrawerParent {
-  public init(numberOfPages: Swift.Int? = 5, height: CoreFoundation.CGFloat? = 16, width: CoreFoundation.CGFloat? = 16, space: CoreFoundation.CGFloat? = 16, raduis: CoreFoundation.CGFloat? = 8, currentItem: CoreFoundation.CGFloat? = 0, indicatorColor: UIKit.UIColor? = .white, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreFoundation.CGFloat = 1, indicatorBorderColor: UIKit.UIColor = .white, indicatorBorderWidth: CoreFoundation.CGFloat = 2)
+  public init(numberOfPages: Swift.Int? = 5, height: CoreGraphics.CGFloat? = 16, width: CoreGraphics.CGFloat? = 16, space: CoreGraphics.CGFloat? = 16, raduis: CoreGraphics.CGFloat? = 8, currentItem: CoreGraphics.CGFloat? = 0, indicatorColor: UIKit.UIColor? = .white, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreGraphics.CGFloat = 1, indicatorBorderColor: UIKit.UIColor = .white, indicatorBorderWidth: CoreGraphics.CGFloat = 2)
   @objc deinit
 }
 public class AdvancedPageControlDrawerParent {
   public var numberOfPages: Swift.Int
-  public var size: CoreFoundation.CGFloat
-  public var currentItem: CoreFoundation.CGFloat
+  public var size: CoreGraphics.CGFloat
+  public var currentItem: CoreGraphics.CGFloat
   public var items: [Swift.Int]
-  public init(numberOfPages: Swift.Int? = 5, height: CoreFoundation.CGFloat? = 16, width: CoreFoundation.CGFloat? = 16, space: CoreFoundation.CGFloat? = 16, raduis: CoreFoundation.CGFloat? = 16, currentItem: CoreFoundation.CGFloat? = 0, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreFoundation.CGFloat = 1)
+  public init(numberOfPages: Swift.Int? = 5, height: CoreGraphics.CGFloat? = 16, width: CoreGraphics.CGFloat? = 16, space: CoreGraphics.CGFloat? = 16, raduis: CoreGraphics.CGFloat? = 16, currentItem: CoreGraphics.CGFloat? = 0, dotsColor: UIKit.UIColor? = UIColor.lightGray, isBordered: Swift.Bool = false, borderColor: UIKit.UIColor = .white, borderWidth: CoreGraphics.CGFloat = 1)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class StandingsViewComponent : KaizenSDK.BaseComponent {
   @_Concurrency.MainActor(unsafe) override public func configure(with kzStandingModel: KaizenSDK.KZSharedProtocolModel)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -443,13 +441,13 @@ public enum LanguageKey : Swift.String {
   }
 }
 @_inheritsConvenienceInitializers public class SwapDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 @_inheritsConvenienceInitializers public class ThinWormDrawer : KaizenSDK.AdvancedPageControlDrawerParentWithIndicator, KaizenSDK.AdvancedPageControlDraw {
-  public func draw(_ rect: CoreFoundation.CGRect)
-  override public init(numberOfPages: Swift.Int? = super, height: CoreFoundation.CGFloat? = super, width: CoreFoundation.CGFloat? = super, space: CoreFoundation.CGFloat? = super, raduis: CoreFoundation.CGFloat? = super, currentItem: CoreFoundation.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreFoundation.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreFoundation.CGFloat = super)
+  public func draw(_ rect: CoreGraphics.CGRect)
+  override public init(numberOfPages: Swift.Int? = super, height: CoreGraphics.CGFloat? = super, width: CoreGraphics.CGFloat? = super, space: CoreGraphics.CGFloat? = super, raduis: CoreGraphics.CGFloat? = super, currentItem: CoreGraphics.CGFloat? = super, indicatorColor: UIKit.UIColor? = super, dotsColor: UIKit.UIColor? = super, isBordered: Swift.Bool = super, borderColor: UIKit.UIColor = super, borderWidth: CoreGraphics.CGFloat = super, indicatorBorderColor: UIKit.UIColor = super, indicatorBorderWidth: CoreGraphics.CGFloat = super)
   @objc deinit
 }
 extension KaizenSDK.UseCaseError : Swift.Equatable {}
