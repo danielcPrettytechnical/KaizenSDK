@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Pretty Technical' => 'https://gitlab.com/prettytechnical/kaizen/ios-sdk.git' }
   s.source           =  { :path => '.' }
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = ['KaizenSDK/**/*.{h,m,swift,xib,storyboard, xcassets}']
   s.dependency 'Alamofire'
