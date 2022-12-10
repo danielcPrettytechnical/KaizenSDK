@@ -182,12 +182,11 @@ public struct KZStyleMatchDetailModel : KaizenSDK.KZSharedProtocolModel {
   public let refreshToken: Swift.String?
   public init(identifier: Swift.String, lang: KaizenSDK.LanguageKey = .english, highlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Bold",
                                                 size: 12.0), unHighlightFont: UIKit.UIFont? = UIFont(name: "Roboto-Regular",
-                                                  size: 12.0), progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor, accessToken: Swift.String? = nil, refreshToken: Swift.String? = nil)
+                                                  size: 12.0), progressIndicatorColor: [UIKit.UIColor] = kzSDKDefaultProgressIndicatorColor, height: CoreGraphics.CGFloat, accessToken: Swift.String? = nil, refreshToken: Swift.String? = nil, delegate: KaizenSDK.KZStateComponentDelegate? = nil)
 }
 public protocol MatchDetailRoutingLogic : AnyObject {
   func start()
   func dismiss()
-  var matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel { get set }
 }
 public struct MatchDetailViewBuilder {
   public static func inject(with navigationController: UIKit.UINavigationController?, matchDetailStyle: KaizenSDK.KZStyleMatchDetailModel) -> KaizenSDK.MatchDetailRoutingLogic

@@ -54,51 +54,51 @@
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		u7RUf9AfCOPIXu1biccJl4KZW6U=
+		OZgOI6TcxxJWSVgnBK77iTTjwL4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		CrB7F0JoS+MyyLctpb03rElVW8o=
+		GE/EoLdnCSPfdIMRppmJmyvtDzY=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0qvaHQphaIC2i5BJuQBv8/I4cVU=
+		xx48J4RALHTu6qPSptisRKb4Tt4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		u7RUf9AfCOPIXu1biccJl4KZW6U=
+		OZgOI6TcxxJWSVgnBK77iTTjwL4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		CrB7F0JoS+MyyLctpb03rElVW8o=
+		GE/EoLdnCSPfdIMRppmJmyvtDzY=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		0qvaHQphaIC2i5BJuQBv8/I4cVU=
+		xx48J4RALHTu6qPSptisRKb4Tt4=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		e6gGThFzq6GAzdQqt3DmepLHtO8=
+		8fvbX59r3RSqq6xsWqZPoh0KXLA=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		He9gxOwWZWCtiDAGI9FOYqSM+zA=
+		4pV0TVJVGrBlMkq8GqoTo54YfU8=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uuNbSABx7VAnkUxEVwnjcZK05YQ=
+		j/fhi8ArmabYqd2BH8I4ixGxiu0=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		e6gGThFzq6GAzdQqt3DmepLHtO8=
+		8fvbX59r3RSqq6xsWqZPoh0KXLA=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		He9gxOwWZWCtiDAGI9FOYqSM+zA=
+		4pV0TVJVGrBlMkq8GqoTo54YfU8=
 		</data>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		uuNbSABx7VAnkUxEVwnjcZK05YQ=
+		j/fhi8ArmabYqd2BH8I4ixGxiu0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -216,84 +216,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ohu7Zv1CXh9PtN/kskDvqvKTtATtZS/uoNIF9XFDv+8=
+			Fo0dT7oSHI2c7dWgR6hP2TnhJpOkiBmmDMEY12p7HO8=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MqZ1ZqNWFY5fiU+p9dNKqs1hmwFkw/uZn4jxi/DjjAg=
+			Zboux/eB72IEH6V+iZrauLwwhfR7b15st3iL61EqnRY=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cd8h9W4O7S5o72IvL44WgJSq9aiuQ3t90ueyV9D8GEE=
+			Knd27v0rDj3jjcJtjH7ZuT/Kxa1qesqa32WlBYXLgiU=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ohu7Zv1CXh9PtN/kskDvqvKTtATtZS/uoNIF9XFDv+8=
+			Fo0dT7oSHI2c7dWgR6hP2TnhJpOkiBmmDMEY12p7HO8=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MqZ1ZqNWFY5fiU+p9dNKqs1hmwFkw/uZn4jxi/DjjAg=
+			Zboux/eB72IEH6V+iZrauLwwhfR7b15st3iL61EqnRY=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cd8h9W4O7S5o72IvL44WgJSq9aiuQ3t90ueyV9D8GEE=
+			Knd27v0rDj3jjcJtjH7ZuT/Kxa1qesqa32WlBYXLgiU=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SOCHYWiIwzH30GtRjOWc78uyme0xDjpAvVAMtV7PxgI=
+			5uFpfcUFsASxb8hno+oNrJjJ2PXibC+/42r9HMu7jj8=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j/OdYzjy9x3FvB+5wZCRI2QMSaoes8eWxSz41KcKNJM=
+			22kw2Au3gSompKzMrEqzqjEUx/a1JgHNoIdZwJJmFck=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KN7nogHs350bLddFLwHEXnTzSg0cB3ngKyeaiO2gKLs=
+			uAFIEIzprvotUotFrzqgJb7fDAiocxc/zUYsDk0TRgA=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SOCHYWiIwzH30GtRjOWc78uyme0xDjpAvVAMtV7PxgI=
+			5uFpfcUFsASxb8hno+oNrJjJ2PXibC+/42r9HMu7jj8=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j/OdYzjy9x3FvB+5wZCRI2QMSaoes8eWxSz41KcKNJM=
+			22kw2Au3gSompKzMrEqzqjEUx/a1JgHNoIdZwJJmFck=
 			</data>
 		</dict>
 		<key>Modules/KaizenSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KN7nogHs350bLddFLwHEXnTzSg0cB3ngKyeaiO2gKLs=
+			uAFIEIzprvotUotFrzqgJb7fDAiocxc/zUYsDk0TRgA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
