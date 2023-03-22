@@ -94,6 +94,7 @@ public enum KZStateComponentViewState {
   case mapping
   case underlying(context: Swift.String)
   case readyState
+  case tokenExpired
 }
 public protocol KZStateComponentDelegate : AnyObject {
   func changeViewState(_ state: KaizenSDK.KZStateComponentViewState, component: Swift.String)
