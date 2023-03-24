@@ -8,6 +8,16 @@ Kaizen is a power component development kit made with love from the pretty techn
  -   Swift 5.1+
 -   [CocoaPods](https://cocoapods.org/)
 
+# Config Example project
+
+ 1. First clone the project to your local folder.
+ 2. Open terminal and navigate to your local folder.
+ 3. Execute this command below
+``` swift
+Pod install
+```
+ 4. Once you finish to execute pod install with success you can open the **.xcwokspace** file
+
 # Git
 To accomplish pretty technical standards we use git flow to manage the code, please see our guidelines from our [confluence](https://prettytechnical.atlassian.net/wiki/spaces/PT/pages/304054462/Development+Git+guidelines) page 
 
@@ -102,4 +112,3 @@ You can ask your colleagues, your Product Owner or the  [Mobile Chapter Lead](da
 If you consider that there is some information that is not clear, missing or needs more clarification please contact us and we will add it to this document as soon as possible. We can improve this document with all of your cooperation.
 
 Thank you very much to help us all to make a better code
-

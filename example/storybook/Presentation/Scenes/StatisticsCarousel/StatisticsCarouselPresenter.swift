@@ -16,6 +16,6 @@ class StatisticsCarouselPresenter: StatisticsCarouselPresentationLogic {
     }
 
     func didHaveAnError(with message: String) {
-        router?.showError(with: message)
+        // router?.showError(with: message)
     }
 }
