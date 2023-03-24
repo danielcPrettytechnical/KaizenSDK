@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KaizenSDK'
-  s.version          = '1.0.6'
+  s.version          = '1.1.0'
   s.summary          = 'KaizenSDK is a software development kit (SDK) for iOS gaming apps'
 
 

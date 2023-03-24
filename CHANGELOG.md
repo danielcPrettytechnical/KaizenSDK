@@ -1,8 +1,3 @@
-## Version 1.0.0
-- Custom Empty state component if there is a error in match detail.
-- Improvements 
-- Disable user interaction when match detail is shown.
-
 ## Version 1.0.1
 - SDK Initialization to Accept Tokens as parameters.
 - When the drawer is open  the user can't do any action on the empty space of the drawer until dismiss the drawer.
@@ -35,3 +30,6 @@
 - Fix Missing error information
 - Fix Same height for pitch/overview
 - Fix Statistics screen needs alignment fix
+
+## Version 1.0.1
+- API change to isMobile
