@@ -1,6 +1,8 @@
 # Kaizen SDK
 Kaizen is a power component development kit made with love from the pretty technical team for the Kaizen project.
 
+Check deployment and release process [**Deployment and Release**](https://gitlab.com/prettytechnical/kaizen/ios-sdk/-/blob/master/KaizenSDK/Domain/ProvidersContract/TemplateProviderContract.swift)
+
 # Requirements
 
  -   iOS 10.0+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0+
